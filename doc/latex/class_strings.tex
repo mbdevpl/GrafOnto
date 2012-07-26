@@ -1,0 +1,130 @@
+\hypertarget{class_strings}{\section{\-Strings \-Class \-Reference}
+\label{class_strings}\index{\-Strings@{\-Strings}}
+}
+
+
+\-Utility class used to handle strings and vectors of strings.  
+
+
+
+
+{\ttfamily \#include $<$strings.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::vector$<$ std\-::string $>$ \hyperlink{class_strings_a0eedb78d3b12658ebaa8b60136e8fc7e}{string\-To\-Array} (const std\-::string \&long\-String, char separator)
+\begin{DoxyCompactList}\small\item\em \-Makes a string vector out of string with separators and a sample of a separator. \-If a symbol is a separator it can't be at the same time used as a symbol in any member string. \end{DoxyCompactList}\item 
+static std\-::string \& \hyperlink{class_strings_a98c86bfdd96ef2ea86f7c6eac43bf583}{ltrim} (std\-::string \&s)
+\begin{DoxyCompactList}\small\item\em \-Trims a given string from start. \end{DoxyCompactList}\item 
+static std\-::string \& \hyperlink{class_strings_a1b346c44599dbf886e86a5fa508dfb0a}{rtrim} (std\-::string \&s)
+\begin{DoxyCompactList}\small\item\em \-Trims a given string from end. \end{DoxyCompactList}\item 
+static std\-::string \& \hyperlink{class_strings_a4c17187355f77ffd9116024b792327ef}{trim} (std\-::string \&s)
+\begin{DoxyCompactList}\small\item\em \-Trims a given string from both ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\-::string \hyperlink{class_strings_a9069eb99db3a03a96acb5824d306ff53}{\-Empty\-String} = std\-::string()
+\item 
+static const \-String\-Vector \hyperlink{class_strings_a955ff72272619b3edbd2458c0371f98f}{\-Empty\-String\-Array} = std\-::vector$<$std\-::string$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Utility class used to handle strings and vectors of strings. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_strings_a98c86bfdd96ef2ea86f7c6eac43bf583}{\index{\-Strings@{\-Strings}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!Strings@{\-Strings}}
+\subsubsection[{ltrim}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string \& {\bf \-Strings\-::ltrim} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{class_strings_a98c86bfdd96ef2ea86f7c6eac43bf583}
+
+
+\-Trims a given string from start. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em s} & string to be trimmed, in-\/out argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+reference to the same string 
+\end{DoxyReturn}
+\hypertarget{class_strings_a1b346c44599dbf886e86a5fa508dfb0a}{\index{\-Strings@{\-Strings}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!Strings@{\-Strings}}
+\subsubsection[{rtrim}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string \& {\bf \-Strings\-::rtrim} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{class_strings_a1b346c44599dbf886e86a5fa508dfb0a}
+
+
+\-Trims a given string from end. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em s} & string to be trimmed, in-\/out argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+reference to the same string 
+\end{DoxyReturn}
+\hypertarget{class_strings_a0eedb78d3b12658ebaa8b60136e8fc7e}{\index{\-Strings@{\-Strings}!string\-To\-Array@{string\-To\-Array}}
+\index{string\-To\-Array@{string\-To\-Array}!Strings@{\-Strings}}
+\subsubsection[{string\-To\-Array}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ std\-::string $>$ {\bf \-Strings\-::string\-To\-Array} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{long\-String, }
+\item[{char}]{separator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_strings_a0eedb78d3b12658ebaa8b60136e8fc7e}
+
+
+\-Makes a string vector out of string with separators and a sample of a separator. \-If a symbol is a separator it can't be at the same time used as a symbol in any member string. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em long\-String} & given string \\
+\hline
+{\em separator} & the separator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+long string parsed using a given separator 
+\end{DoxyReturn}
+\hypertarget{class_strings_a4c17187355f77ffd9116024b792327ef}{\index{\-Strings@{\-Strings}!trim@{trim}}
+\index{trim@{trim}!Strings@{\-Strings}}
+\subsubsection[{trim}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string \& {\bf \-Strings\-::trim} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, static\mbox{]}}}}\label{class_strings_a4c17187355f77ffd9116024b792327ef}
+
+
+\-Trims a given string from both ends. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em s} & string to be trimmed, in-\/out argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+reference to the same string 
+\end{DoxyReturn}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_strings_a9069eb99db3a03a96acb5824d306ff53}{\index{\-Strings@{\-Strings}!\-Empty\-String@{\-Empty\-String}}
+\index{\-Empty\-String@{\-Empty\-String}!Strings@{\-Strings}}
+\subsubsection[{\-Empty\-String}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string {\bf \-Strings\-::\-Empty\-String} = std\-::string()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_strings_a9069eb99db3a03a96acb5824d306ff53}
+\-String of length zero. \hypertarget{class_strings_a955ff72272619b3edbd2458c0371f98f}{\index{\-Strings@{\-Strings}!\-Empty\-String\-Array@{\-Empty\-String\-Array}}
+\index{\-Empty\-String\-Array@{\-Empty\-String\-Array}!Strings@{\-Strings}}
+\subsubsection[{\-Empty\-String\-Array}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$ std\-::string $>$ {\bf \-Strings\-::\-Empty\-String\-Array} = std\-::vector$<$std\-::string$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_strings_a955ff72272619b3edbd2458c0371f98f}
+\-S\-T\-L vector with no elements. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/strings.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/strings.\-cpp\end{DoxyCompactItemize}

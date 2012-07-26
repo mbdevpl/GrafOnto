@@ -1,0 +1,69 @@
+\hypertarget{class_element}{\section{\-Element \-Class \-Reference}
+\label{class_element}\index{\-Element@{\-Element}}
+}
+
+
+\hyperlink{class_element}{\-Element} stores a value of a specific \hyperlink{class_category}{\-Category}. \-Value may affect other values of the \-Cell containing it, as well as \-Cells connected to the above mentioned cell.  
+
+
+
+
+{\ttfamily \#include $<$element.\-h$>$}
+
+\-Inheritance diagram for \-Element\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_element}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_element_a9215b851ecf46a90b0f1c2ff53a41539}{{\bfseries \-Element} (std\-::string \&\hyperlink{class_node_aa829edc37a2c92dacdab95bcef248175}{name}, \hyperlink{class_category}{\-Category} $\ast$\hyperlink{class_element_afa00dd000a5070957ea6d6035fb966bb}{category}, bool \hyperlink{class_element_aab52339b96c0a9ed05da28a26b5fb146}{transitive}=false)}\label{class_element_a9215b851ecf46a90b0f1c2ff53a41539}
+
+\item 
+\hypertarget{class_element_a3da28385c4f4cc48948464385cb911cc}{{\bfseries \-Element} (std\-::string \&\hyperlink{class_node_aa829edc37a2c92dacdab95bcef248175}{name}, std\-::string \&\hyperlink{class_node_a157acddebd6860eccdc8495039db161f}{friendly\-Name}, \hyperlink{class_category}{\-Category} $\ast$\hyperlink{class_element_afa00dd000a5070957ea6d6035fb966bb}{category}, bool \hyperlink{class_element_aab52339b96c0a9ed05da28a26b5fb146}{transitive}=false)}\label{class_element_a3da28385c4f4cc48948464385cb911cc}
+
+\item 
+\hypertarget{class_element_af84b1a37746d819c65e03c1d6e35b5f8}{\hyperlink{class_category}{\-Category} {\bfseries get\-Category} () const }\label{class_element_af84b1a37746d819c65e03c1d6e35b5f8}
+
+\item 
+\hypertarget{class_element_ac0c4de0334231c6d0772907fa6356d97}{bool {\bfseries is\-Transitive} () const }\label{class_element_ac0c4de0334231c6d0772907fa6356d97}
+
+\item 
+\hypertarget{class_element_a50a6c93072db6628d53d8f1b603ec10b}{void {\bfseries set\-Transitive} (bool is\-Transitive)}\label{class_element_a50a6c93072db6628d53d8f1b603ec10b}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_element_afa00dd000a5070957ea6d6035fb966bb}{\hyperlink{class_category}{\-Category} $\ast$ \hyperlink{class_element_afa00dd000a5070957ea6d6035fb966bb}{category}}\label{class_element_afa00dd000a5070957ea6d6035fb966bb}
+
+\begin{DoxyCompactList}\small\item\em determines what kind of \hyperlink{class_element}{\-Element} it is i.\-e. 'thing', 'situation', etc. \end{DoxyCompactList}\item 
+bool \hyperlink{class_element_aab52339b96c0a9ed05da28a26b5fb146}{transitive}
+\begin{DoxyCompactList}\small\item\em determines if this element is transitive, i.\-e. if\-: 1) three \-Cells are connected like a-\/$>$b-\/$>$c 2) both \-Cell a and \-Cell b have this element in them then the ontology interprets this as if there was a connection between a and c (a-\/$>$c) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_element_a67d1cdc1dbbd62556631b0551f18642c}{std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_element}{\-Element} \&e)}\label{class_element_a67d1cdc1dbbd62556631b0551f18642c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_element}{\-Element} stores a value of a specific \hyperlink{class_category}{\-Category}. \-Value may affect other values of the \-Cell containing it, as well as \-Cells connected to the above mentioned cell. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_element_aab52339b96c0a9ed05da28a26b5fb146}{\index{\-Element@{\-Element}!transitive@{transitive}}
+\index{transitive@{transitive}!Element@{\-Element}}
+\subsubsection[{transitive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Element\-::transitive}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_element_aab52339b96c0a9ed05da28a26b5fb146}
+
+
+determines if this element is transitive, i.\-e. if\-: 1) three \-Cells are connected like a-\/$>$b-\/$>$c 2) both \-Cell a and \-Cell b have this element in them then the ontology interprets this as if there was a connection between a and c (a-\/$>$c) 
+
+example ontology\-: \char`\"{}add category obj\char`\"{} \char`\"{}add category relation\char`\"{} \char`\"{}add obj a\char`\"{} \char`\"{}add obj b\char`\"{} \char`\"{}add obj c\char`\"{} \char`\"{}add relation is\char`\"{} \char`\"{}set is transitive\char`\"{} \char`\"{}a is\-: b\char`\"{} \char`\"{}b is\-: c\char`\"{} query\-: \char`\"{}find all that is c\char`\"{} program responds\-: \char`\"{}\mbox{[}obj\-:a, obj\-:b\mbox{]}\char`\"{} 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/element.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/element.\-cpp\end{DoxyCompactItemize}

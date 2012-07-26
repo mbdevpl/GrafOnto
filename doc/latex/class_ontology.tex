@@ -1,0 +1,199 @@
+\hypertarget{class_ontology}{\section{\-Ontology \-Class \-Reference}
+\label{class_ontology}\index{\-Ontology@{\-Ontology}}
+}
+
+
+\-A network of possibly connected concepts. \-Concepts are organized into \-Elements, and these are organized into \-Categories. \-Each \hyperlink{class_element}{\-Element} belongs to exactly one \hyperlink{class_category}{\-Category}. \-Elements are then joined together into groups called \-Cells. \-A \-Cell contains at most one element of every category defined in the ontology.  
+
+
+
+
+{\ttfamily \#include $<$ontology.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ontology_a7c32cc412fe76fd5b148f52dd4bc0646}{\hyperlink{class_ontology_a7c32cc412fe76fd5b148f52dd4bc0646}{\-Ontology} ()}\label{class_ontology_a7c32cc412fe76fd5b148f52dd4bc0646}
+
+\begin{DoxyCompactList}\small\item\em \-Constructs an empty ontology. \end{DoxyCompactList}\item 
+\hyperlink{class_ontology_a2b0309345b55df1face155193731d66d}{\-Ontology} (std\-::string categories\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Constructs an ontology that has given categories. \end{DoxyCompactList}\item 
+void \hyperlink{class_ontology_a66bce91133f0a4358e86440e96c473a9}{execute} (const char $\ast$command)
+\begin{DoxyCompactList}\small\item\em \-Executes a command on the ontology. \end{DoxyCompactList}\item 
+void \hyperlink{class_ontology_a19fc00fa444aa17e11e7df987fe1e4ef}{execute} (std\-::string \&command)
+\item 
+void \hyperlink{class_ontology_ac5a01673e1cf9e5630370a8c601a2d45}{add\-Category} (std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em \-Adds a new property to the ontology definitions list. \end{DoxyCompactList}\item 
+void \hyperlink{class_ontology_a2eb5644b824de580d5d888822082ec21}{add\-Element} (std\-::string \&kind, std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em \-Adds a new element to the ontology definitions list. \end{DoxyCompactList}\item 
+\hypertarget{class_ontology_a323ef74eee40d73b0258f83fd7931e77}{void {\bfseries add\-Cell} (\-Cell \&cell)}\label{class_ontology_a323ef74eee40d73b0258f83fd7931e77}
+
+\item 
+\hypertarget{class_ontology_ac40bc219ffd7ad8911e6d965f4dcd5c4}{void {\bfseries add\-Statement} (\-Cell \&left, \-Cell \&right)}\label{class_ontology_ac40bc219ffd7ad8911e6d965f4dcd5c4}
+
+\item 
+\hypertarget{class_ontology_a13d63841c74748a05bd3b9e56fd06271}{\hyperlink{class_category}{\-Category} $\ast$ {\bfseries find\-Category} (const std\-::string \&name)}\label{class_ontology_a13d63841c74748a05bd3b9e56fd06271}
+
+\item 
+\hypertarget{class_ontology_a3e9fbd69bbf6f774b8dff245addd5b57}{\hyperlink{class_element}{\-Element} $\ast$ {\bfseries find\-Element} (const std\-::string \&name)}\label{class_ontology_a3e9fbd69bbf6f774b8dff245addd5b57}
+
+\item 
+\hypertarget{class_ontology_ab7ff21cfb9c281ac09b161347dfa286b}{\-Cell \& {\bfseries find\-Cell} (\-Cell \&matching)}\label{class_ontology_ab7ff21cfb9c281ac09b161347dfa286b}
+
+\item 
+\hypertarget{class_ontology_adf686e0ef260bfe36542fd3d239d3d8f}{std\-::string {\bfseries to\-String} () const }\label{class_ontology_adf686e0ef260bfe36542fd3d239d3d8f}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_ontology_a68187ced293d40e2d1e5315c284184a8}{\-Reserved} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em \-Defines all possible relations in this ontology. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ontology_a4c7a0da29421df3c0a4564a90c07ea3c}{\-Statement\-Vector \hyperlink{class_ontology_a4c7a0da29421df3c0a4564a90c07ea3c}{statements}}\label{class_ontology_a4c7a0da29421df3c0a4564a90c07ea3c}
+
+\begin{DoxyCompactList}\small\item\em \-List of statements that makes up the ontology. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_ontology_affb28054cc04d534908f058da13dff5b}{std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_ontology}{\-Ontology} \&o)}\label{class_ontology_affb28054cc04d534908f058da13dff5b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A network of possibly connected concepts. \-Concepts are organized into \-Elements, and these are organized into \-Categories. \-Each \hyperlink{class_element}{\-Element} belongs to exactly one \hyperlink{class_category}{\-Category}. \-Elements are then joined together into groups called \-Cells. \-A \-Cell contains at most one element of every category defined in the ontology. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_ontology_a2b0309345b55df1face155193731d66d}{\index{\-Ontology@{\-Ontology}!\-Ontology@{\-Ontology}}
+\index{\-Ontology@{\-Ontology}!Ontology@{\-Ontology}}
+\subsubsection[{\-Ontology}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Ontology\-::\-Ontology} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{categories\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_ontology_a2b0309345b55df1face155193731d66d}
+
+
+\-Constructs an ontology that has given categories. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em categories} & array of names of the categories \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_ontology_ac5a01673e1cf9e5630370a8c601a2d45}{\index{\-Ontology@{\-Ontology}!add\-Category@{add\-Category}}
+\index{add\-Category@{add\-Category}!Ontology@{\-Ontology}}
+\subsubsection[{add\-Category}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ontology\-::add\-Category} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_ontology_ac5a01673e1cf9e5630370a8c601a2d45}
+
+
+\-Adds a new property to the ontology definitions list. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em name} & name of the new property \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ontology_a2eb5644b824de580d5d888822082ec21}{\index{\-Ontology@{\-Ontology}!add\-Element@{add\-Element}}
+\index{add\-Element@{add\-Element}!Ontology@{\-Ontology}}
+\subsubsection[{add\-Element}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ontology\-::add\-Element} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{kind, }
+\item[{std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_ontology_a2eb5644b824de580d5d888822082ec21}
+
+
+\-Adds a new element to the ontology definitions list. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em kind} & property, to which given value will be assigned \\
+\hline
+{\em name} & name of the new element \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ontology_a66bce91133f0a4358e86440e96c473a9}{\index{\-Ontology@{\-Ontology}!execute@{execute}}
+\index{execute@{execute}!Ontology@{\-Ontology}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ontology\-::execute} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}}\label{class_ontology_a66bce91133f0a4358e86440e96c473a9}
+
+
+\-Executes a command on the ontology. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command} & natural language command given as a parameter, which is parsed, analyzed and executed; operation is aborted in case of any error in command; example commands\-: to add a category 'thing'\-: 
+\begin{DoxyCode}
+ add category thing 
+\end{DoxyCode}
+ to delete a category 'thing'\-: 
+\begin{DoxyCode}
+ delete category thing 
+\end{DoxyCode}
+ to add an element of category 'thing', named 'car' 
+\begin{DoxyCode}
+ add thing car 
+\end{DoxyCode}
+ to add a relation 'is' (assuming category named 'relation' exists)\-: 
+\begin{DoxyCode}
+ add relation is 
+\end{DoxyCode}
+ to make relation 'is' transitive\-: 
+\begin{DoxyCode}
+ set is transitive 
+\end{DoxyCode}
+ to make relation 'is' not transitive (which is a default for every element)\-: 
+\begin{DoxyCode}
+ set is not transitive 
+\end{DoxyCode}
+ to add a connection (assuming things 'car' and 'vehicle' exist, and relation 'is' exists)\-: 
+\begin{DoxyCode}
+ car is: vehicle 
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_ontology_a19fc00fa444aa17e11e7df987fe1e4ef}{\index{\-Ontology@{\-Ontology}!execute@{execute}}
+\index{execute@{execute}!Ontology@{\-Ontology}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Ontology\-::execute} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{command}
+\end{DoxyParamCaption}
+)}}\label{class_ontology_a19fc00fa444aa17e11e7df987fe1e4ef}
+\begin{DoxySeeAlso}{\-See also}
+\hyperlink{class_ontology_a66bce91133f0a4358e86440e96c473a9}{execute(const char$\ast$)} 
+\end{DoxySeeAlso}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_ontology_a68187ced293d40e2d1e5315c284184a8}{\index{\-Ontology@{\-Ontology}!\-Reserved@{\-Reserved}}
+\index{\-Reserved@{\-Reserved}!Ontology@{\-Ontology}}
+\subsubsection[{\-Reserved}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-Ontology\-::\-Reserved}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_ontology_a68187ced293d40e2d1e5315c284184a8}
+{\bfseries \-Initial value\-:}
+\begin{DoxyCode}
+ {"add", "category", "delete", "select", "load",
+                                    "save", "all", "statement", "not", "
+      transitive"}
+\end{DoxyCode}
+
+
+\-Defines all possible relations in this ontology. 
+
+\-List of reserved words. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/ontology.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/ontology.\-cpp\end{DoxyCompactItemize}
