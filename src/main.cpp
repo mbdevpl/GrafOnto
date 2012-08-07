@@ -1,68 +1,37 @@
-#include <QtGui/QApplication>
-#include <iostream>
-#include "mainwindow.h"
-#include "ontology.h"
+//#include "ontology/ontology.h"
+#include "grafonto.h"
 
-int main(int argc, char *argv[])
-{
-   QApplication a(argc, argv);
+using namespace mbdev;
 
-   if(argc > 0) {
-      for(int i = 0; i < argc; i++)
-         std::cout << "arg" << i << "=" << argv[i] << std::endl;
-   }
+/*!
+  \brief Launches GrafOnto. There are several modes of operation possible. By default,
+   GUI written in Qt is launched. For other options see argv parameter description.
+  \param argc number of commandline arguments
+  \param argv command line arguments
+   \code -gui \endcode is the default mode,
+   \code -text \endcode launches text mode, which essentially is an interpreter directly
+   in the console
+   \code -auto \endcode interprets all subsequent commands and then immediately exits
+   the application
+   fore example: \code -auto load 'db.txt'; john is: human; save 'db.txt' \endcode
+   will load the file, add a statement to the ontology, save it under the same name, and exit
+   \code -demo \endcode will load an example ontology at application startup it can be used
+   in conjunction with any of the three: gui/text/none
+  */
+int main(int argc, char *argv[]) {
+   //#ifdef DEBUG
+   //   //ontology::debugMode = debugMode;
+   //   std::cout << "command line arguments:\n";
+   //   if(argc > 0) {
+   //      for(int i = 0; i < argc; i++)
+   //         std::cout << "  arg" << i << "=" << argv[i] << std::endl;
+   //   } else
+   //      std::cout << "  none" << std::endl;
+   //#endif
 
-   Ontology o("thing, feature, situation, class");
+   grafonto gr(argc, argv);
+   return gr.exec();
 
-   o.execute("add thing animal");
-   o.execute("add thing rabbit");
-   o.execute("add thing bird");
-   o.execute("add thing wings");
-   o.execute("add thing aeroplane");
-   o.execute("add thing penguin");
-   o.execute("add thing wheels");
-   o.execute("add thing windows");
-   o.execute("add thing eyes");
-   o.execute("add thing engine");
-
-   o.execute("add feature big");
-   o.execute("add feature large");
-   o.execute("add feature small");
-   o.execute("add feature black");
-   o.execute("add feature transparent");
-   o.execute("add feature loud");
-
-   o.execute("add situation is");
-   o.execute("add situation has");
-   o.execute("add situation eats");
-   o.execute("add situation loves");
-
-   o.execute("set is transitive");
-
-   //o.execute("add property (thing, feature, situation, class)");
-   //o.execute("add feature (big, small, black, transparent, loud)");
-   //o.execute("add situation (is, has, eats, loves)");
-
-   o.execute("rabbit is: animal");
-   o.execute("bird is: animal");
-   o.execute("small bird is: small animal");
-   o.execute("bird has: wings");
-   o.execute("aeroplane has: wings");
-   o.execute("aeroplane has: loud engine");
-   o.execute("small bird loves: engine");
-   o.execute("large bird eats: rabbit");
-
-   std::cout << o << "\n";
-
-   std::string s = o.execute("find all that has: wings");
-   std::cout << s;
-
-   //o.execute("big is: large");
-   //o.execute("large is: big");
-
-   return 0;
-
-   MainWindow w;
-   w.show();
-   return a.exec();
+   //console_application c(argc, argv);
+   //return c.exec();
 }

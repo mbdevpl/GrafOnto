@@ -1,24 +1,22 @@
 #pragma once
 #include <ostream>
-#include <vector>
-#include "node.h"
-#include "category.h"
+#include "ontology/node.h"
+#include "ontology/category.h"
 
-class Element;
+using namespace mbdev;
 
-typedef Element Elem;
+namespace mbdev_ontology {
 
 /*!
   \brief Element stores a value of a specific Category. Value may affect other values of the Cell
    containing it, as well as Cells connected to the above mentioned cell.
   */
-class Element: public Node
-{
+class element: public node {
 protected:
    /*!
      \brief determines what kind of Element it is i.e. 'thing', 'situation', etc.
      */
-   Category* category;
+   category* cat;
    /*!
      \brief determines if this element is transitive, i.e. if:
       1) three Cells are connected like a->b->c
@@ -32,10 +30,13 @@ protected:
      */
    bool transitive;
 public:
-   Element(std::string& name, Category* category, bool transitive = false);
-   Element(std::string& name, std::string& friendlyName, Category* category, bool transitive = false);
-   Category getCategory() const;
+   element(string& name, category* cat, bool transitive = false);
+   element(string& name, string& friendlyName, category* cat, bool transitive = false);
+   category getCategory() const;
+   category* getCategoryPtr();
    bool isTransitive() const;
    void setTransitive(bool isTransitive);
-   friend std::ostream& operator<<(std::ostream& os, const Element& e);
+   friend std::ostream& operator<<(std::ostream& os, const element& e);
 };
+
+}

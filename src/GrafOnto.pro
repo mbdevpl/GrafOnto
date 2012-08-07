@@ -4,25 +4,50 @@
 #
 #-------------------------------------------------
 
+#CONFIG(debug, debug|release)
+
+#debug:DEFINES+=DEBUG
+
 QT       += core gui
 
 TARGET = bin
 TEMPLATE = app
 
+DEFINES += DEBUG
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    node.cpp \
-    ontology.cpp \
-    element.cpp \
-    category.cpp \
-    strings.cpp
+SOURCES += main.cpp \
+	 mainwindow.cpp \
+	 ontology/node.cpp \
+	 ontology/element.cpp \
+	 ontology/category.cpp \
+	 ontology/ontology.cpp \
+    mbdev/string.cpp \
+	 mbdev/strings.cpp \
+    mbdev/vector.cpp \
+    mbdev/toolkit.cpp \
+    mbdev/string_vector.cpp \
+    mbdev/ptr_vector.cpp \
+    grafonto.cpp \
+    mbdev/console_application.cpp \
+    ontology/cell.cpp \
+    ontology/statement.cpp
 
-HEADERS  += mainwindow.h \
-    node.h \
-    ontology.h \
-    element.h \
-    category.h \
-    strings.h
+
+HEADERS  += \
+    mainwindow.h \
+    ontology/node.h \
+    ontology/element.h \
+    ontology/category.h \
+    ontology/ontology.h \
+    mbdev/string.h \
+	 mbdev/strings.h \
+    mbdev/vector.h \
+    mbdev/toolkit.h \
+    mbdev/string_vector.h \
+    mbdev/ptr_vector.h \
+    grafonto.h \
+    mbdev/console_application.h \
+    ontology/cell.h \
+    ontology/statement.h
 
 FORMS    += mainwindow.ui
