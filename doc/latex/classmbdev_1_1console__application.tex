@@ -1,0 +1,91 @@
+\hypertarget{classmbdev_1_1console__application}{\section{mbdev\-:\-:console\-\_\-application \-Class \-Reference}
+\label{classmbdev_1_1console__application}\index{mbdev\-::console\-\_\-application@{mbdev\-::console\-\_\-application}}
+}
+
+
+\-Meant to be sub-\/classed with a real console application.  
+
+
+
+
+{\ttfamily \#include $<$console\-\_\-application.\-h$>$}
+
+\-Inheritance diagram for mbdev\-:\-:console\-\_\-application\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmbdev_1_1console__application}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev_1_1console__application_a8105151a36efcca192dcb3709c6ea652}{{\bfseries console\-\_\-application} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})}\label{classmbdev_1_1console__application_a8105151a36efcca192dcb3709c6ea652}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a58242f26b9b2b32faa2525bea0f6eecd}{bool {\bfseries is\-Allowed} (char ch)}\label{classmbdev_1_1console__application_a58242f26b9b2b32faa2525bea0f6eecd}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a4da56afaaaf53820dde5551ae34bc8da}{virtual int {\bfseries exec} ()}\label{classmbdev_1_1console__application_a4da56afaaaf53820dde5551ae34bc8da}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_aaba2a906eb64593cc43ceec6ad96e830}{int {\bfseries simulate\-Exec} (const \hyperlink{classmbdev_1_1string}{string} \&input)}\label{classmbdev_1_1console__application_aaba2a906eb64593cc43ceec6ad96e830}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev_1_1console__application_a8dc3fef0a026cb33b71b08ae3a02c9fd}{void {\bfseries handle\-Tab} (\hyperlink{classmbdev_1_1string}{string} \&text)}\label{classmbdev_1_1console__application_a8dc3fef0a026cb33b71b08ae3a02c9fd}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_ac6bd452145f850e141c3ca64f401c04c}{virtual \hyperlink{classmbdev_1_1string}{string} {\bfseries execute} (const \hyperlink{classmbdev_1_1string}{string} \&command)}\label{classmbdev_1_1console__application_ac6bd452145f850e141c3ca64f401c04c}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a518e890cc969a5986d171dea2e800115}{virtual \hyperlink{classmbdev_1_1string}{string} {\bfseries get\-Clue} (const \hyperlink{classmbdev_1_1string}{string} \&current)}\label{classmbdev_1_1console__application_a518e890cc969a5986d171dea2e800115}
+
+\item 
+\hyperlink{classmbdev_1_1string}{string} \hyperlink{classmbdev_1_1console__application_a7d13549416b40695a144fd1f3eb999bc}{get\-Command} ()
+\begin{DoxyCompactList}\small\item\em \-Blocks the console and waits for user input. \end{DoxyCompactList}\item 
+\hypertarget{classmbdev_1_1console__application_a045e4f99a41e470c5e2f85cfce5d65a8}{\hyperlink{classmbdev_1_1string}{string} {\bfseries get\-Simulated\-Command} (const \hyperlink{classmbdev_1_1string}{string} \&simulated)}\label{classmbdev_1_1console__application_a045e4f99a41e470c5e2f85cfce5d65a8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev_1_1console__application_ae43acd48296ae5e210c63f4bcf79a348}{bool {\bfseries debug\-Mode}}\label{classmbdev_1_1console__application_ae43acd48296ae5e210c63f4bcf79a348}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a9fd2e56ecae607129169af845dc85174}{int {\bfseries argc}}\label{classmbdev_1_1console__application_a9fd2e56ecae607129169af845dc85174}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a92abff8076aa6963cb3f513510cd8257}{char $\ast$$\ast$ {\bfseries argv}}\label{classmbdev_1_1console__application_a92abff8076aa6963cb3f513510cd8257}
+
+\item 
+\hypertarget{classmbdev_1_1console__application_a9fea8a17d4c76f544deec3817a031587}{\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} {\bfseries args}}\label{classmbdev_1_1console__application_a9fea8a17d4c76f544deec3817a031587}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Meant to be sub-\/classed with a real console application. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classmbdev_1_1console__application_a7d13549416b40695a144fd1f3eb999bc}{\index{mbdev\-::console\-\_\-application@{mbdev\-::console\-\_\-application}!get\-Command@{get\-Command}}
+\index{get\-Command@{get\-Command}!mbdev::console_application@{mbdev\-::console\-\_\-application}}
+\subsubsection[{get\-Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} {\bf mbdev\-::console\-\_\-application\-::get\-Command} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classmbdev_1_1console__application_a7d13549416b40695a144fd1f3eb999bc}
+
+
+\-Blocks the console and waits for user input. 
+
+\begin{DoxyReturn}{\-Returns}
+user command, after pressing \-Enter 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/mbdev/console\-\_\-application.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/mbdev/console\-\_\-application.\-cpp\end{DoxyCompactItemize}

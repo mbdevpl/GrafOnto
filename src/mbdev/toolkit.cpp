@@ -3,6 +3,7 @@
 namespace mbdev {
 
 char getch() {
+#ifdef CONSOLE_LINUX
    char buf = 0;
    struct termios old = {0};
    if (tcgetattr(0, &old) < 0)
@@ -20,6 +21,10 @@ char getch() {
    if (tcsetattr(0, TCSADRAIN, &old) < 0)
       perror ("tcsetattr ~ICANON");
    return (buf);
+#endif
+#ifdef CONSOLE_WINDOWS
+   return _getch();
+#endif
 }
 
 }

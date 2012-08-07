@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">GrafOnto
-   &#160;<span id="projectnumber">0.25</span>
+   &#160;<span id="projectnumber">0.35</span>
    </div>
    <div id="projectbrief">Converts an ontology to a graph.</div>
   </td>
@@ -100,12 +100,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><table>
-  <tr><td class="indexkey"><a class="el" href="class_category.html">Category</a></td><td class="indexvalue">Defines a property than an <a class="el" href="class_element.html" title="Element stores a value of a specific Category. Value may affect other values of the Cell containing i...">Element</a> can have </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_element.html">Element</a></td><td class="indexvalue"><a class="el" href="class_element.html" title="Element stores a value of a specific Category. Value may affect other values of the Cell containing i...">Element</a> stores a value of a specific <a class="el" href="class_category.html" title="Defines a property than an Element can have.">Category</a>. Value may affect other values of the Cell containing it, as well as Cells connected to the above mentioned cell </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1category.html">mbdev_ontology::category</a></td><td class="indexvalue">Defines a property than an Element can have </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1cell.html">mbdev_ontology::cell</a></td><td class="indexvalue">Used to store a set of elements, each of which belonging to a different category. Uses a map: a structure that contains at most one value for each category defined in the ontology </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev_1_1console__application.html">mbdev::console_application</a></td><td class="indexvalue">Meant to be sub-classed with a real console application </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1element.html">mbdev_ontology::element</a></td><td class="indexvalue">Element stores a value of a specific Category. Value may affect other values of the Cell containing it, as well as Cells connected to the above mentioned cell </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classgrafonto.html">grafonto</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_main_window.html">MainWindow</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_node.html">Node</a></td><td class="indexvalue">Contains common behaviour of <a class="el" href="class_element.html" title="Element stores a value of a specific Category. Value may affect other values of the Cell containing i...">Element</a> and Relation </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_ontology.html">Ontology</a></td><td class="indexvalue">A network of possibly connected concepts. Concepts are organized into Elements, and these are organized into Categories. Each <a class="el" href="class_element.html" title="Element stores a value of a specific Category. Value may affect other values of the Cell containing i...">Element</a> belongs to exactly one <a class="el" href="class_category.html" title="Defines a property than an Element can have.">Category</a>. Elements are then joined together into groups called Cells. A Cell contains at most one element of every category defined in the ontology </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_strings.html">Strings</a></td><td class="indexvalue">Utility class used to handle strings and vectors of strings </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1node.html">mbdev_ontology::node</a></td><td class="indexvalue">Contains common behaviour of Element and Relation </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td class="indexvalue">A network of possibly connected concepts. Concepts are organized into Elements, and these are organized into Categories. Each Element belongs to exactly one Category. Elements are then joined together into groups called Cells. A Cell contains at most one element of every category defined in the ontology </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev_1_1ptr__vector.html">mbdev::ptr_vector&lt; T &gt;</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1statement.html">mbdev_ontology::statement</a></td><td class="indexvalue">Used to store a single statement of an ontology. Statement is a pair of cells </td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev_1_1string.html">mbdev::string</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev_1_1string__vector.html">mbdev::string_vector</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classstd_1_1vector.html">vector</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev_1_1vector.html">mbdev::vector&lt; T &gt;</a></td><td class="indexvalue"></td></tr>
 </table>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -126,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Thu Jul 26 2012 14:32:01 for GrafOnto by
+    <li class="footer">Generated on Tue Aug 7 2012 23:00:25 for GrafOnto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

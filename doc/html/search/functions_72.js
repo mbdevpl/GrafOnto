@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rtrim',['rtrim',['../class_strings.html#a1b346c44599dbf886e86a5fa508dfb0a',1,'Strings']]]
+  ['rtrim',['rtrim',['../classmbdev_1_1string.html#acd0647d477fc2fd71cf4902423075000',1,'mbdev::string']]]
 ];

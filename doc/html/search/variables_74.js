@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transitive',['transitive',['../class_element.html#aab52339b96c0a9ed05da28a26b5fb146',1,'Element']]]
+  ['transitive',['transitive',['../classmbdev__ontology_1_1element.html#a2dd58a46bab19cdf0c243bcd84c23fdb',1,'mbdev_ontology::element']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['transitive',['transitive',['../class_element.html#aab52339b96c0a9ed05da28a26b5fb146',1,'Element']]],
-  ['trim',['trim',['../class_strings.html#a4c17187355f77ffd9116024b792327ef',1,'Strings']]]
+  ['tovector',['toVector',['../classmbdev_1_1string.html#a32e61d95ec60bc8c9a419551284278aa',1,'mbdev::string']]],
+  ['transitive',['transitive',['../classmbdev__ontology_1_1element.html#a2dd58a46bab19cdf0c243bcd84c23fdb',1,'mbdev_ontology::element']]],
+  ['trim',['trim',['../classmbdev_1_1string.html#a5f8b27d5a309c9c5acb58e741b046438',1,'mbdev::string']]]
 ];

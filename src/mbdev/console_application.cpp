@@ -237,6 +237,12 @@ string console_application::getSimulatedCommand(const string& simulated) {
 int console_application::exec() {
    string command;
    while(true) {
+#ifdef CONSOLE_WINDOWS
+      //std::string command;
+      //QTextStream qtin(stdin);
+      //QString line = qtin.readLine();
+      //command = line.toStdString();
+#endif
       command = getCommand();
       if(command.equals("exit"))
          break;

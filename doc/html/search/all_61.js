@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['addcategory',['addCategory',['../class_ontology.html#ac5a01673e1cf9e5630370a8c601a2d45',1,'Ontology']]],
-  ['addelement',['addElement',['../class_ontology.html#a2eb5644b824de580d5d888822082ec21',1,'Ontology']]]
+  ['addcategories',['addCategories',['../classmbdev__ontology_1_1ontology.html#aeadc577d640dec083d2f724a05615777',1,'mbdev_ontology::ontology']]],
+  ['addcategory',['addCategory',['../classmbdev__ontology_1_1ontology.html#a9b2644fa7844b5024bc1c03273e0912d',1,'mbdev_ontology::ontology']]],
+  ['addcell',['addCell',['../classmbdev__ontology_1_1ontology.html#a7d7f23014828019de67edb9b3a2166bb',1,'mbdev_ontology::ontology']]],
+  ['addelement',['addElement',['../classmbdev__ontology_1_1ontology.html#aeb353a93019334cdcf01a1c9508077a7',1,'mbdev_ontology::ontology']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['name',['../class_node.html#aa829edc37a2c92dacdab95bcef248175',1,'Node']]]
+  ['name',['name',['../classmbdev__ontology_1_1node.html#a0f69893fcec007d0766997400830a204',1,'mbdev_ontology::node']]]
 ];

@@ -5,9 +5,11 @@
 #include "mbdev/vector.h"
 #include "mbdev/string_vector.h"
 #include "mbdev/string.h"
+#ifdef CONSOLE_QT //ordinary text input - per line buffering
+#include <QTextStream>
+#endif
 
-//ordinary text input - unused
-//#include <QTextStream>
+
 
 namespace mbdev {
 

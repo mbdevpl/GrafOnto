@@ -1,8 +1,14 @@
 #pragma once
-//for getch
+#ifdef CONSOLE_LINUX
+//for getch:
 #include <cstdio>
 #include <unistd.h>
 #include <termios.h>
+#endif
+
+#ifdef CONSOLE_WINDOWS
+#include <conio.h>
+#endif
 
 #ifndef nullptr
 #define nullptr NULL

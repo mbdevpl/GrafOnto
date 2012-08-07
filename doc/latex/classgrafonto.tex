@@ -1,0 +1,138 @@
+\hypertarget{classgrafonto}{\section{grafonto \-Class \-Reference}
+\label{classgrafonto}\index{grafonto@{grafonto}}
+}
+\-Inheritance diagram for grafonto\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classgrafonto}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgrafonto_ac24e7e64810ed10cf36656bd7e8e9b12}{{\bfseries grafonto} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})}\label{classgrafonto_ac24e7e64810ed10cf36656bd7e8e9b12}
+
+\item 
+\hypertarget{classgrafonto_a3f2cce1c012b25e0c66ec2bbdbc3f786}{virtual int {\bfseries exec} ()}\label{classgrafonto_a3f2cce1c012b25e0c66ec2bbdbc3f786}
+
+\item 
+\hypertarget{classgrafonto_adfef5ece0152a2c3715eacab7a7673af}{int {\bfseries text\-\_\-mode} ()}\label{classgrafonto_adfef5ece0152a2c3715eacab7a7673af}
+
+\item 
+\hypertarget{classgrafonto_ac2ab48fb386a5814d3270e3c70877a16}{int {\bfseries gui\-\_\-mode} ()}\label{classgrafonto_ac2ab48fb386a5814d3270e3c70877a16}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classgrafonto_a638219f0ede60ecdd4563759e8610af2}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Add} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a638219f0ede60ecdd4563759e8610af2}
+
+\item 
+\hypertarget{classgrafonto_ad23ffa340d8adfd8d7d124cfbc2acd5a}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Set} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_ad23ffa340d8adfd8d7d124cfbc2acd5a}
+
+\item 
+\hypertarget{classgrafonto_a70dd25b1813816cf86ce1a648ea73bf6}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Delete} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a70dd25b1813816cf86ce1a648ea73bf6}
+
+\item 
+\hypertarget{classgrafonto_a830c6f5519f944c6ef2eeff41b614ec1}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Find} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a830c6f5519f944c6ef2eeff41b614ec1}
+
+\item 
+\hypertarget{classgrafonto_a3f68ed8a56cb970d74213b46f9c79446}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Load} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a3f68ed8a56cb970d74213b46f9c79446}
+
+\item 
+\hypertarget{classgrafonto_a160a47eeb7221a3b7cebb677f097918c}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Save} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a160a47eeb7221a3b7cebb677f097918c}
+
+\item 
+\hypertarget{classgrafonto_a7ff5a6e85553906cef2126f3d5ffa8e2}{\hyperlink{classmbdev_1_1string}{string} {\bfseries execute\-Statement} (\hyperlink{classmbdev_1_1string__vector}{string\-\_\-vector} \&arguments)}\label{classgrafonto_a7ff5a6e85553906cef2126f3d5ffa8e2}
+
+\item 
+virtual \hyperlink{classmbdev_1_1string}{string} \hyperlink{classgrafonto_ab0d713e50d84c78a2dc6c7d190beaeae}{execute} (const \hyperlink{classmbdev_1_1string}{string} \&command)
+\begin{DoxyCompactList}\small\item\em \-Executes a command on the ontology. \end{DoxyCompactList}\item 
+\hypertarget{classgrafonto_a52ec25f316e0d0c2d49bfaa52b815a96}{virtual \hyperlink{classmbdev_1_1string}{string} {\bfseries get\-Clue} (const \hyperlink{classmbdev_1_1string}{string} \&current)}\label{classgrafonto_a52ec25f316e0d0c2d49bfaa52b815a96}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classgrafonto_ab0d713e50d84c78a2dc6c7d190beaeae}{\index{grafonto@{grafonto}!execute@{execute}}
+\index{execute@{execute}!grafonto@{grafonto}}
+\subsubsection[{execute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} {\bf grafonto\-::execute} (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}\label{classgrafonto_ab0d713e50d84c78a2dc6c7d190beaeae}
+
+
+\-Executes a command on the ontology. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em command} & natural language command given as a parameter, which is parsed, analyzed and executed; operation is aborted in case of any error in command; example commands\-: to add a category 'thing'\-: 
+\begin{DoxyCode}
+ add category thing 
+\end{DoxyCode}
+ to delete a category 'thing'\-: 
+\begin{DoxyCode}
+ delete category thing 
+\end{DoxyCode}
+ to add an element of category 'thing', named 'car' 
+\begin{DoxyCode}
+ add thing car 
+\end{DoxyCode}
+ to add a relation 'is' (assuming category named 'relation' exists)\-: 
+\begin{DoxyCode}
+ add relation is 
+\end{DoxyCode}
+ to make relation 'is' transitive\-: 
+\begin{DoxyCode}
+ set is transitive 
+\end{DoxyCode}
+ to make relation 'is' not transitive (which is a default for every element)\-: 
+\begin{DoxyCode}
+ set is not transitive 
+\end{DoxyCode}
+ to add a connection (assuming things 'car' and 'vehicle' exist, and relation 'is' exists)\-: 
+\begin{DoxyCode}
+ car is: vehicle 
+\end{DoxyCode}
+ to find every element that 'is animal'\-: 
+\begin{DoxyCode}
+ find all that is animal 
+\end{DoxyCode}
+ to find every 'thing' that 'has wings'\-: 
+\begin{DoxyCode}
+ find thing that has wings 
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+result of the command, which non-\/empty only in case of queries. queries are done using 'find' keyword, for example, given an ontology\-: 
+\begin{DoxyCode}
+ add category (obj, relation)
+      add obj (a, b, c)
+      add relation is
+      set is transitive
+      a is: b
+      b is: c
+\end{DoxyCode}
+ by executing the command 
+\begin{DoxyCode}
+ find all that is c 
+\end{DoxyCode}
+ program returns 
+\begin{DoxyCode}
+ a, b 
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+\-Reimplemented from \hyperlink{classmbdev_1_1console__application}{mbdev\-::console\-\_\-application}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/grafonto.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/grafonto.\-cpp\end{DoxyCompactItemize}

@@ -336,10 +336,6 @@ int grafonto::exec() {
 }
 
 int grafonto::text_mode() {
-   //std::string command;
-   //QTextStream qtin(stdin);
-   //QString line = qtin.readLine();
-   //command = line.toStdString();
    if(interactiveMode)
       return console_application::exec();
    else

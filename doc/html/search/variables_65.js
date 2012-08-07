@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['emptystring',['EmptyString',['../class_strings.html#a9069eb99db3a03a96acb5824d306ff53',1,'Strings']]],
-  ['emptystringarray',['EmptyStringArray',['../class_strings.html#a955ff72272619b3edbd2458c0371f98f',1,'Strings']]]
+  ['empty',['empty',['../classmbdev_1_1string__vector.html#a217dba7ae43824ecc9da76db562fed16',1,'mbdev::string_vector']]],
+  ['emptystdstr',['emptyStdStr',['../classmbdev_1_1string.html#abe8e7c5dd8a04459bb1f323c9fd54f2a',1,'mbdev::string']]],
+  ['emptystr',['emptyStr',['../classmbdev_1_1string.html#af3502d5e7550b0328ce963f6e32d6856',1,'mbdev::string']]]
 ];

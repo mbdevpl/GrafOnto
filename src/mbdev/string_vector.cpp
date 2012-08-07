@@ -61,7 +61,7 @@ string string_vector::str(const string& separator, int pos, size_t n) const {
    if(size == 0)
       return string::emptyStr;
    int beg = 0;
-   if(pos > 0 && pos < size)
+   if(pos > 0 && (size_t)pos < size)
       beg = pos;
    int end = size;
    if(n != std::string::npos && beg + n < size)

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['statements',['statements',['../class_ontology.html#a4c7a0da29421df3c0a4564a90c07ea3c',1,'Ontology']]],
-  ['strings',['Strings',['../class_strings.html',1,'']]],
-  ['stringtoarray',['stringToArray',['../class_strings.html#a0eedb78d3b12658ebaa8b60136e8fc7e',1,'Strings']]]
+  ['statement',['statement',['../classmbdev__ontology_1_1statement.html',1,'mbdev_ontology']]],
+  ['statements',['statements',['../classmbdev__ontology_1_1ontology.html#afe40885a5e07d5c03a85d1112be0af4b',1,'mbdev_ontology::ontology']]],
+  ['string',['string',['../classmbdev_1_1string.html',1,'mbdev']]],
+  ['string_5fvector',['string_vector',['../classmbdev_1_1string__vector.html',1,'mbdev']]]
 ];

@@ -19,6 +19,9 @@ using namespace mbdev;
    in conjunction with any of the three: gui/text/none
   */
 int main(int argc, char *argv[]) {
+#ifdef RELEASE
+   std::cout << "(C) 2012 Mateusz Bysiek, http://mbdev.pl/" << std::endl;
+#endif
    //#ifdef DEBUG
    //   //ontology::debugMode = debugMode;
    //   std::cout << "command line arguments:\n";

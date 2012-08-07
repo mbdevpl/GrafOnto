@@ -1,0 +1,72 @@
+\hypertarget{classmbdev__ontology_1_1element}{\section{mbdev\-\_\-ontology\-:\-:element \-Class \-Reference}
+\label{classmbdev__ontology_1_1element}\index{mbdev\-\_\-ontology\-::element@{mbdev\-\_\-ontology\-::element}}
+}
+
+
+\-Element stores a value of a specific \-Category. \-Value may affect other values of the \-Cell containing it, as well as \-Cells connected to the above mentioned cell.  
+
+
+
+
+{\ttfamily \#include $<$element.\-h$>$}
+
+\-Inheritance diagram for mbdev\-\_\-ontology\-:\-:element\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmbdev__ontology_1_1element}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev__ontology_1_1element_a1314f373fcfc0e4f8621e7272c7f96f1}{{\bfseries element} (\hyperlink{classmbdev_1_1string}{string} \&\hyperlink{classmbdev__ontology_1_1node_a0f69893fcec007d0766997400830a204}{name}, \hyperlink{classmbdev__ontology_1_1category}{category} $\ast$\hyperlink{classmbdev__ontology_1_1element_a90da561e20a92103b33e879e78032e0a}{cat}, bool \hyperlink{classmbdev__ontology_1_1element_a2dd58a46bab19cdf0c243bcd84c23fdb}{transitive}=false)}\label{classmbdev__ontology_1_1element_a1314f373fcfc0e4f8621e7272c7f96f1}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1element_ad50e1b6aa536a204bd6a47ca0cbc5754}{{\bfseries element} (\hyperlink{classmbdev_1_1string}{string} \&\hyperlink{classmbdev__ontology_1_1node_a0f69893fcec007d0766997400830a204}{name}, \hyperlink{classmbdev_1_1string}{string} \&\hyperlink{classmbdev__ontology_1_1node_a8af5c00f684a8c06ceeddd0a2b1ff97c}{friendly\-Name}, \hyperlink{classmbdev__ontology_1_1category}{category} $\ast$\hyperlink{classmbdev__ontology_1_1element_a90da561e20a92103b33e879e78032e0a}{cat}, bool \hyperlink{classmbdev__ontology_1_1element_a2dd58a46bab19cdf0c243bcd84c23fdb}{transitive}=false)}\label{classmbdev__ontology_1_1element_ad50e1b6aa536a204bd6a47ca0cbc5754}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1element_ad61d2fbc29f304a342a24080f2950769}{\hyperlink{classmbdev__ontology_1_1category}{category} {\bfseries get\-Category} () const }\label{classmbdev__ontology_1_1element_ad61d2fbc29f304a342a24080f2950769}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1element_a3edbfba48add185625a883daab537a4a}{\hyperlink{classmbdev__ontology_1_1category}{category} $\ast$ {\bfseries get\-Category\-Ptr} ()}\label{classmbdev__ontology_1_1element_a3edbfba48add185625a883daab537a4a}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1element_a661134a04667b21be53139bf5a73deef}{bool {\bfseries is\-Transitive} () const }\label{classmbdev__ontology_1_1element_a661134a04667b21be53139bf5a73deef}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1element_ae4ae80555e858025b5bb8eeff2d44bac}{void {\bfseries set\-Transitive} (bool is\-Transitive)}\label{classmbdev__ontology_1_1element_ae4ae80555e858025b5bb8eeff2d44bac}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev__ontology_1_1element_a90da561e20a92103b33e879e78032e0a}{\hyperlink{classmbdev__ontology_1_1category}{category} $\ast$ \hyperlink{classmbdev__ontology_1_1element_a90da561e20a92103b33e879e78032e0a}{cat}}\label{classmbdev__ontology_1_1element_a90da561e20a92103b33e879e78032e0a}
+
+\begin{DoxyCompactList}\small\item\em determines what kind of \-Element it is i.\-e. 'thing', 'situation', etc. \end{DoxyCompactList}\item 
+bool \hyperlink{classmbdev__ontology_1_1element_a2dd58a46bab19cdf0c243bcd84c23fdb}{transitive}
+\begin{DoxyCompactList}\small\item\em determines if this element is transitive, i.\-e. if\-: 1) three \-Cells are connected like a-\/$>$b-\/$>$c 2) both \-Cell a and \-Cell b have this element in them then the ontology interprets this as if there was a connection between a and c (a-\/$>$c) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmbdev__ontology_1_1element_aec34156b3910eda665d18dcfe5e2cfe5}{std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&os, const \hyperlink{classmbdev__ontology_1_1element}{element} \&e)}\label{classmbdev__ontology_1_1element_aec34156b3910eda665d18dcfe5e2cfe5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Element stores a value of a specific \-Category. \-Value may affect other values of the \-Cell containing it, as well as \-Cells connected to the above mentioned cell. 
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{classmbdev__ontology_1_1element_a2dd58a46bab19cdf0c243bcd84c23fdb}{\index{mbdev\-\_\-ontology\-::element@{mbdev\-\_\-ontology\-::element}!transitive@{transitive}}
+\index{transitive@{transitive}!mbdev_ontology::element@{mbdev\-\_\-ontology\-::element}}
+\subsubsection[{transitive}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf mbdev\-\_\-ontology\-::element\-::transitive}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{classmbdev__ontology_1_1element_a2dd58a46bab19cdf0c243bcd84c23fdb}
+
+
+determines if this element is transitive, i.\-e. if\-: 1) three \-Cells are connected like a-\/$>$b-\/$>$c 2) both \-Cell a and \-Cell b have this element in them then the ontology interprets this as if there was a connection between a and c (a-\/$>$c) 
+
+example ontology\-: \char`\"{}add category obj\char`\"{} \char`\"{}add category relation\char`\"{} \char`\"{}add obj a\char`\"{} \char`\"{}add obj b\char`\"{} \char`\"{}add obj c\char`\"{} \char`\"{}add relation is\char`\"{} \char`\"{}set is transitive\char`\"{} \char`\"{}a is\-: b\char`\"{} \char`\"{}b is\-: c\char`\"{} query\-: \char`\"{}find all that is c\char`\"{} program responds\-: \char`\"{}\mbox{[}obj\-:a, obj\-:b\mbox{]}\char`\"{} 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/media/projects/cpp/\-Graf\-Onto/src/ontology/element.\-h\item 
+/media/projects/cpp/\-Graf\-Onto/src/ontology/element.\-cpp\end{DoxyCompactItemize}

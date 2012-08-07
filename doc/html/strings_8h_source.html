@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GrafOnto: /media/projects/cpp/GrafOnto/src/strings.h Source File</title>
+<title>GrafOnto: /media/projects/cpp/GrafOnto/src/mbdev/strings.h Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">GrafOnto
-   &#160;<span id="projectnumber">0.25</span>
+   &#160;<span id="projectnumber">0.35</span>
    </div>
    <div id="projectbrief">Converts an ontology to a graph.</div>
   </td>
@@ -93,43 +93,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/media/projects/cpp/GrafOnto/src/strings.h</div>  </div>
+<div class="title">/media/projects/cpp/GrafOnto/src/mbdev/strings.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#include &lt;algorithm&gt;</span>
-<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;cctype&gt;</span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;functional&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;locale&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;vector&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// name that is easier to use</span>
-<a name="l00010"></a>00010 <span class="keyword">typedef</span> std::vector&lt;std::string&gt; StringVector;
-<a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="class_strings.html">00015</a> <span class="keyword">class </span><a class="code" href="class_strings.html" title="Utility class used to handle strings and vectors of strings.">Strings</a> {
-<a name="l00016"></a>00016 <span class="keyword">public</span>:
-<a name="l00020"></a><a class="code" href="class_strings.html#a9069eb99db3a03a96acb5824d306ff53">00020</a>    <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code" href="class_strings.html#a9069eb99db3a03a96acb5824d306ff53">EmptyString</a>;
-<a name="l00024"></a><a class="code" href="class_strings.html#a955ff72272619b3edbd2458c0371f98f">00024</a>    <span class="keyword">static</span> <span class="keyword">const</span> StringVector <a class="code" href="class_strings.html#a955ff72272619b3edbd2458c0371f98f">EmptyStringArray</a>;
-<a name="l00034"></a>00034    <span class="keyword">static</span> std::vector&lt;std::string&gt; <a class="code" href="class_strings.html#a0eedb78d3b12658ebaa8b60136e8fc7e" title="Makes a string vector out of string with separators and a sample of a separator. If a symbol is a sep...">stringToArray</a>(<span class="keyword">const</span> std::string&amp; longString, <span class="keywordtype">char</span> separator);
-<a name="l00041"></a>00041    <span class="keyword">static</span> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a98c86bfdd96ef2ea86f7c6eac43bf583" title="Trims a given string from start.">ltrim</a>(std::string &amp;s);
-<a name="l00048"></a>00048    <span class="keyword">static</span> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a1b346c44599dbf886e86a5fa508dfb0a" title="Trims a given string from end.">rtrim</a>(std::string &amp;s);
-<a name="l00055"></a>00055    <span class="keyword">static</span> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a4c17187355f77ffd9116024b792327ef" title="Trims a given string from both ends.">trim</a>(std::string &amp;s);
-<a name="l00056"></a>00056 };
-<a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="class_strings.html#a98c86bfdd96ef2ea86f7c6eac43bf583">00058</a> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a98c86bfdd96ef2ea86f7c6eac43bf583" title="Trims a given string from start.">Strings::ltrim</a>(std::string &amp;s) {
-<a name="l00059"></a>00059    s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun&lt;int, int&gt;(std::isspace))));
-<a name="l00060"></a>00060    <span class="keywordflow">return</span> s;
-<a name="l00061"></a>00061 }
-<a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="class_strings.html#a1b346c44599dbf886e86a5fa508dfb0a">00063</a> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a1b346c44599dbf886e86a5fa508dfb0a" title="Trims a given string from end.">Strings::rtrim</a>(std::string &amp;s) {
-<a name="l00064"></a>00064    s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun&lt;int, int&gt;(std::isspace))).base(), s.end());
-<a name="l00065"></a>00065    <span class="keywordflow">return</span> s;
-<a name="l00066"></a>00066 }
-<a name="l00067"></a>00067 
-<a name="l00068"></a><a class="code" href="class_strings.html#a4c17187355f77ffd9116024b792327ef">00068</a> <span class="keyword">inline</span> std::string&amp; <a class="code" href="class_strings.html#a4c17187355f77ffd9116024b792327ef" title="Trims a given string from both ends.">Strings::trim</a>(std::string &amp;s) {
-<a name="l00069"></a>00069    <span class="keywordflow">return</span> <a class="code" href="class_strings.html#a98c86bfdd96ef2ea86f7c6eac43bf583" title="Trims a given string from start.">ltrim</a>(<a class="code" href="class_strings.html#a1b346c44599dbf886e86a5fa508dfb0a" title="Trims a given string from end.">rtrim</a>(s));
-<a name="l00070"></a>00070 }
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="comment">//class Strings;</span>
+<a name="l00004"></a>00004 
+<a name="l00006"></a>00006 <span class="comment">//  \brief name that is easier to use</span>
+<a name="l00007"></a>00007 <span class="comment">//  */</span>
+<a name="l00008"></a>00008 <span class="comment">//typedef std::vector&lt;std::string&gt; StringVector;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 
+<a name="l00012"></a>00012 <span class="comment">//  \brief Utility class used to handle strings and vectors of strings.</span>
+<a name="l00013"></a>00013 <span class="comment">//  */</span>
+<a name="l00014"></a>00014 <span class="comment">//class Strings {</span>
+<a name="l00015"></a>00015 <span class="comment">//public:</span>
+<a name="l00016"></a>00016 <span class="comment">//};</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -150,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><b>strings.h</b>      </li>
 
-    <li class="footer">Generated on Thu Jul 26 2012 14:31:59 for GrafOnto by
+    <li class="footer">Generated on Tue Aug 7 2012 23:00:16 for GrafOnto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

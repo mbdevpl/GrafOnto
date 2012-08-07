@@ -1,19 +1,15 @@
 #-------------------------------------------------
-#
 # Project created by QtCreator 2012-07-24T10:22:51
-#
 #-------------------------------------------------
-
-#CONFIG(debug, debug|release)
-
-#debug:DEFINES+=DEBUG
 
 QT       += core gui
 
 TARGET = bin
 TEMPLATE = app
 
-DEFINES += DEBUG
+DEFINES += CONSOLE_LINUX
+debug:DEFINES += DEBUG
+release:DEFINES += RELEASE
 
 SOURCES += main.cpp \
 	 mainwindow.cpp \
