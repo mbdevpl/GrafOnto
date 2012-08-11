@@ -14,7 +14,7 @@
 using namespace mbdev;
 using namespace mbdev_ontology;
 
-class grafonto : console_application {
+class grafonto : public console_application {
 private:
    /*!
      \brief List of reserved words.

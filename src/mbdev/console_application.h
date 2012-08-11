@@ -58,9 +58,14 @@ protected:
    string getSimulatedCommand(const string& simulated);
 public:
    console_application(int argc, char *argv[]);
+   inline string getUserSymbol() const;
    bool isAllowed(char ch);
    virtual int exec();
    int simulateExec(const string& input);
 };
+
+inline string console_application::getUserSymbol() const {
+    return userSymbol;
+}
 
 }

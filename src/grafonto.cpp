@@ -248,11 +248,15 @@ grafonto::grafonto(int argc, char *argv[])
       onto.debugMode = true;
    }
 #endif
-//   const char* arr[] = {"add", "set", "delete", "find", "load", "save",
-//                         "category", "all", "not", "transitive"};
-//   reserved.push_back(10, (const char**)arr);
-   reserved.push_back(10, (const char*[]){"add", "set", "delete", "find", "load", "save",
-                      "category", "all", "not", "transitive", "debug", "," ,";", "(", ")"});
+#ifdef LINUX
+   reserved.push_back(15, (const char*[]){"add", "set", "delete", "find", "load", "save",
+                      "category", "all", "not", "transitive", "debug", ",", ";", "(", ")"});
+#else
+   const char* arr[] = {"add", "set", "delete", "find", "load", "save",
+                        "category", "all", "not", "transitive", "debug",
+                        ",", ";", "(", ")"};
+   reserved.push_back(15, (const char**)arr);
+#endif
 
    // interpretation of command line arguments
    for(size_t i = 0; i < args.size(); i++) {
