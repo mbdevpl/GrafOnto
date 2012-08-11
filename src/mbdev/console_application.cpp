@@ -61,8 +61,8 @@ void console_application::printLine(string& text, size_t caretPosition, size_t t
 //   str << s;
 //}
 
-console_application::console_application(int argc, char *argv[])
-   : out(std::cout),
+console_application::console_application(int argc, char *argv[], std::ostream& outputStream)
+   : out(outputStream),
      allowedChars(), allowedIntervalsStart(), allowedIntervalsEnd(), userSymbol(string("$ ")),
      index(0), position(0), commandHistory(), debugMode(false), argc(argc), argv(argv), args() {
    // reading command line arguments
@@ -74,6 +74,15 @@ console_application::console_application(int argc, char *argv[])
       }
       args.push_back(arg);
    }
+#ifdef DEBUG
+   out << "command line arguments:\n";
+   if(argc > 0) {
+      for(int i = 0; i < argc; i++)
+         out << "  arg" << i << "=" << argv[i] << "\n";
+   } else
+      out << "  none\n";
+   out.flush();
+#endif
    initialize();
 }
 

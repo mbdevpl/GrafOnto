@@ -57,15 +57,30 @@ protected:
    string getCommand();
    string getSimulatedCommand(const string& simulated);
 public:
-   console_application(int argc, char *argv[]);
+   console_application(int argc, char *argv[], std::ostream& outputStream = std::cout);
    inline string getUserSymbol() const;
+   inline size_t getCommandHistorySize() const;
+   inline string getCommandHistoryEntry(const size_t index) const;
    bool isAllowed(char ch);
+   inline string externExecute(const string& command);
    virtual int exec();
    int simulateExec(const string& input);
 };
 
 inline string console_application::getUserSymbol() const {
     return userSymbol;
+}
+
+inline size_t console_application::getCommandHistorySize() const {
+   return commandHistory.size();
+}
+
+inline string console_application::getCommandHistoryEntry(const size_t index) const {
+   return commandHistory[index];
+}
+
+inline string console_application::externExecute(const string& command) {
+   return execute(command);
 }
 
 }

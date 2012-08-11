@@ -123,14 +123,21 @@ ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
       //std::cout.flush();
    }
 #endif
-   cell& matched = *((cell*)&matching);
+   cell& matched = *((cell*)&matching); //conversion to non-const ref.
    ptr_vector<cell> results;
-   int size = cells.size();
-   if(size == 0 || matching.size() == 0)
+   size_t size = cells.size();
+   if(size == 0)
       return results;
+   if(matching.size() == 0) { // returning all cells
+      if(exact)
+         return results; // or none, if exact matching
+      for(size_t i=0; i<size; i++)
+         results.push_back(cells[i]);
+      return results;
+   }
 
    cell::iterator it;
-   for(int n=0; n<size; n++) {
+   for(size_t n=0; n<size; n++) {
       cell& c = *cells[n];
 #ifdef DEBUG
       if(debugMode) {
@@ -170,6 +177,10 @@ ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
    }
 #endif
    return results;
+}
+
+ptr_vector<cell> ontology::findCells() {
+   return findCells(cell(), false);
 }
 
 ptr_vector<statement> ontology::findStatements(statement& matching,

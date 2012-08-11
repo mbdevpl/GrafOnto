@@ -57,6 +57,7 @@ protected:
    ptr_vector<statement> statements;
 public:
 #ifdef DEBUG
+   //toggles debug mode, effective only when running debug build (i.e. DEBUG is defined)
    static bool debugMode;
 #endif
    /*!
@@ -84,6 +85,7 @@ public:
      \param name name of the new element
      */
    string addElement(string& kind, string& name);
+   // adds multiple elements
    string addElements(string& kind, string_vector& names);
    /*!
      \brief Adds a cell to the list of defined cells.
@@ -108,6 +110,8 @@ public:
       and returns their address.
      */
    ptr_vector<cell> findCells(const cell& matching, bool exact = false);
+   // returns all cells
+   ptr_vector<cell> findCells();
    /*!
      \brief Looks for a category that has the given name and returns its address.
      */

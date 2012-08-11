@@ -28,15 +28,9 @@ int main(int argc, char *argv[]) {
              << "(C) 2012 Mateusz Bysiek, http://mbdev.pl/" << std::endl
              << "released under GNU General Public License version 3" << std::endl;
 #endif
-   //#ifdef DEBUG
-   //   //ontology::debugMode = debugMode;
-   //   std::cout << "command line arguments:\n";
-   //   if(argc > 0) {
-   //      for(int i = 0; i < argc; i++)
-   //         std::cout << "  arg" << i << "=" << argv[i] << std::endl;
-   //   } else
-   //      std::cout << "  none" << std::endl;
-   //#endif
+#ifdef DEBUG
+   std::cout << "Running in debug mode" << std::endl;
+#endif
 
    grafonto gr(argc, argv);
    return gr.exec();

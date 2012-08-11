@@ -26,6 +26,7 @@ protected:
 public:
    explicit MainWindow(ontology &onto, grafonto& graf, QWidget* parent = 0);
    ~MainWindow();
+private slots:
 private:
-   void execute(const QString& command);
+//   void execute(const QString& command);
 };
