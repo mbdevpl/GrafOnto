@@ -7,10 +7,6 @@ QT       += core gui
 TARGET = bin
 TEMPLATE = app
 
-DEFINES += CONSOLE_LINUX
-debug:DEFINES += DEBUG
-release:DEFINES += RELEASE
-
 SOURCES += main.cpp \
 	 mainwindow.cpp \
 	 ontology/node.cpp \

@@ -1,4 +1,7 @@
-//#include "ontology/ontology.h"
+#ifdef RELEASE
+#include <iostream>
+#endif
+
 #include "grafonto.h"
 
 using namespace mbdev;
@@ -20,7 +23,10 @@ using namespace mbdev;
   */
 int main(int argc, char *argv[]) {
 #ifdef RELEASE
-   std::cout << "(C) 2012 Mateusz Bysiek, http://mbdev.pl/" << std::endl;
+   std::cout << "GrafOnto: interactive graphical visualisation" << std::endl
+             << "          of a categorial ontology" << std::endl
+             << "(C) 2012 Mateusz Bysiek, http://mbdev.pl/" << std::endl
+             << "released under GNU General Public License version 3" << std::endl;
 #endif
    //#ifdef DEBUG
    //   //ontology::debugMode = debugMode;

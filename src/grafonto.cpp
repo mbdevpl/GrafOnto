@@ -164,37 +164,13 @@ string grafonto::executeStatement(string_vector& arguments) {
    int index = arguments.indexContains(":");
    if(index < 0)
       throw std::runtime_error("colon (':') not found in the statement. \"a: b\" == \"a implies b\"");
-
    string s1 = arguments.str(' ', 0, index + 1).trim();
    s1.erase(s1.end() - 1);
    string s2 = arguments.str(' ', index + 1).trim();
-   //int vecLen;
-
    string_vector leftVec = s1.toVector(' ').trim();
    cell* left = new cell(leftVec, onto);
-   //      vecLen = leftVec.size();
-   //      for(int i=0; i<vecLen; i++) {
-   //         element* e = onto.findElement(leftVec[i]);
-   //         if(e == nullptr) {
-   //            std::stringstream s;
-   //            s << "'" << leftVec[i] << "'";
-   //            s << " - no such element defined";
-   //            throw std::runtime_error(s.str().c_str());
-   //         }
-   //         category* p = onto.findCategory(e->getCategory().getName());
-   //         left->insert(p,e);
-   //      }
-
    string_vector rightVec = s2.toVector(' ').trim();
    cell* right = new cell(rightVec, onto);
-   //      vecLen = rightVec.size();
-   //      for(int i=0; i<vecLen; i++) {
-   //         element* e = onto.findElement(rightVec[i]);
-   //         if(e == nullptr)
-   //            throw std::runtime_error("undefined element involved in a statement");
-   //         category* p = onto.findCategory(e->getCategory().getName());
-   //         right->insert(p,e);
-   //      }
    return onto.addStatement(*left, *right);
 }
 
@@ -312,9 +288,11 @@ grafonto::grafonto(int argc, char *argv[])
          //o.execute("add situation (is, has, eats, loves)");
          //o.execute("big is: large");
          //o.execute("large is: big");
-
          for(int i=0; i<DEMO_SIZE; i++)
             simulateExec(initialCommands[i]);
+         simulateExec("x");
+         simulateExec("");
+         simulateExec("add category o");
       } else if(!args[i].compare("-text")) {
          textMode = true;
          interactiveMode = true;
@@ -344,7 +322,7 @@ int grafonto::text_mode() {
 
 int grafonto::gui_mode() {
    QApplication a(argc, argv);
-   MainWindow w;
+   MainWindow w(onto, *this);
    w.show();
    return a.exec();
 }

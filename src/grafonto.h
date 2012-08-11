@@ -5,6 +5,7 @@
 #include "mbdev/string_vector.h"
 #include "ontology/ontology.h"
 //Qt gui
+#include <QString>
 #include <QtGui/QApplication>
 #include "mainwindow.h"
 
@@ -65,4 +66,9 @@ public:
    virtual int exec();
    int text_mode();
    int gui_mode();
+   inline QString executeQt(const QString& command);
 };
+
+inline QString grafonto::executeQt(const QString& command) {
+   return QString(execute(command.toStdString()).c_str());
+}

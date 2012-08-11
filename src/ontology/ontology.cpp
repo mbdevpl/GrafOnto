@@ -2,7 +2,9 @@
 
 namespace mbdev_ontology {
 
+#ifdef DEBUG
 bool ontology::debugMode = false;
+#endif
 
 ontology::ontology() {
 }
@@ -116,9 +118,9 @@ element* ontology::findElement(const string& name) {
 ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
 #ifdef DEBUG
    if(debugMode) {
-   std::cout << "looking for cells " << (exact?"exactly ":"~") << "matching ";
-   std::cout << matching << ":";
-   //std::cout.flush();
+      std::cout << "looking for cells " << (exact?"exactly ":"~") << "matching ";
+      std::cout << matching << ":";
+      //std::cout.flush();
    }
 #endif
    cell& matched = *((cell*)&matching);
@@ -132,8 +134,8 @@ ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
       cell& c = *cells[n];
 #ifdef DEBUG
       if(debugMode) {
-      std::cout << " " << c << "?";
-      std::cout.flush();
+         std::cout << " " << c << "?";
+         std::cout.flush();
       }
 #endif
       bool found = true;
@@ -156,22 +158,22 @@ ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
       results.push_back(&c);
 #ifdef DEBUG
       if(debugMode) {
-      std::cout << "yes";// << "\n";
-      std::cout.flush();
+         std::cout << "yes";// << "\n";
+         std::cout.flush();
       }
 #endif
    }
 #ifdef DEBUG
    if(debugMode) {
-   std::cout << " fin.\n";
-   std::cout.flush();
+      std::cout << " fin.\n";
+      std::cout.flush();
    }
 #endif
    return results;
 }
 
 ptr_vector<statement> ontology::findStatements(statement& matching,
-                                         bool ignoreTransitivity) {
+                                               bool ignoreTransitivity) {
    ptr_vector<statement> results;
    size_t size = statements.size();
    if(size == 0)
@@ -185,9 +187,9 @@ ptr_vector<statement> ontology::findStatements(statement& matching,
 
 #ifdef DEBUG
    if(debugMode) {
-   std::cout << "looking for statements matching ";
-   std::cout << matching << ": ";
-   std::cout.flush();
+      std::cout << "looking for statements matching ";
+      std::cout << matching << ": ";
+      std::cout.flush();
    }
 #endif
    for(size_t n=0; n<size; n++) {
@@ -206,10 +208,10 @@ ptr_vector<statement> ontology::findStatements(statement& matching,
             }
 #ifdef DEBUG
             if(debugMode) {
-            // print plaintext
-            std::cout << " (" << *left[l] << ' ' << *right[r] << ")";
-            std::cout << " " << *statements[n];
-            std::cout.flush();
+               // print plaintext
+               std::cout << " (" << *left[l] << ' ' << *right[r] << ")";
+               std::cout << " " << *statements[n];
+               std::cout.flush();
             }
 #endif
             results.push_back(statements[n]);
@@ -295,7 +297,7 @@ ptr_vector<statement> ontology::findStatements(statement& matching,
             size_t sizeResMore = moreResults.size();
             for(size_t j = 0; j<sizeResMore; j++) {
                if(results.indexOf(moreResults[j]) < 0)
-               results.push_back(moreResults[j]);
+                  results.push_back(moreResults[j]);
             }
          }
       }

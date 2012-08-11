@@ -38,6 +38,10 @@ string_vector string::toVector(const char separator) const {
       if (this->at(i) == separator)
          options++;
    string_vector vec;
+//   if(options == 1) {
+//      vec.push_back(*this);
+//      return vec;
+//   }
    for(int i=0; i < options; i++)
       vec.push_back(string::emptyStr);
    options = 0;
@@ -48,9 +52,15 @@ string_vector string::toVector(const char separator) const {
          continue;
       }
       if (localLen == 0) {
-         vec[options] = string::emptyStr;
-         options++;
-         continue;
+         if(at(i) == separator) {
+            vec[options] = string::emptyStr;
+            options++;
+            continue;
+         } else {
+            vec[options] = string(at(i));
+            options++;
+            continue;
+         }
       }
       int start = i - localLen;
       if (i == len - 1 && at(i) != separator) {
