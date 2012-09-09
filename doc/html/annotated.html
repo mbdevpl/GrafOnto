@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">GrafOnto
-   &#160;<span id="projectnumber">0.35</span>
+   &#160;<span id="projectnumber">0.65</span>
    </div>
    <div id="projectbrief">Converts an ontology to a graph.</div>
   </td>
@@ -103,17 +103,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1category.html">mbdev_ontology::category</a></td><td class="indexvalue">Defines a property than an Element can have </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1cell.html">mbdev_ontology::cell</a></td><td class="indexvalue">Used to store a set of elements, each of which belonging to a different category. Uses a map: a structure that contains at most one value for each category defined in the ontology </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev_1_1console__application.html">mbdev::console_application</a></td><td class="indexvalue">Meant to be sub-classed with a real console application </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_console_simulator.html">ConsoleSimulator</a></td><td class="indexvalue">Very simple widget written to handle a console application from inside a Qt GUI application </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1element.html">mbdev_ontology::element</a></td><td class="indexvalue">Element stores a value of a specific Category. Value may affect other values of the Cell containing it, as well as Cells connected to the above mentioned cell </td></tr>
-  <tr><td class="indexkey"><a class="el" href="classgrafonto.html">grafonto</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_main_window.html">MainWindow</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_main_window.html">MainWindow</a></td><td class="indexvalue">Main window consists of two parts, command line with log on the left, and ontology visualisation area on the right hand side </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1node.html">mbdev_ontology::node</a></td><td class="indexvalue">Contains common behaviour of Element and Relation </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_onto_console_interpreter.html">OntoConsoleInterpreter</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1ontointerpreter.html">mbdev_ontology::ontointerpreter</a></td><td class="indexvalue">Console application coupled with a command interpreter, which can be used as just an interpreter and console may be handled completely by external class, in GrafOnto gui it is the <a class="el" href="class_console_simulator.html" title="Very simple widget written to handle a console application from inside a Qt GUI application.">ConsoleSimulator</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td class="indexvalue">A network of possibly connected concepts. Concepts are organized into Elements, and these are organized into Categories. Each Element belongs to exactly one Category. Elements are then joined together into groups called Cells. A Cell contains at most one element of every category defined in the ontology </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_ontology_cell.html">OntologyCell</a></td><td class="indexvalue">Graphical representation of a <a class="el" href="classmbdev__ontology_1_1cell.html" title="Used to store a set of elements, each of which belonging to a different category. Uses a map: a struc...">mbdev_ontology::cell</a> </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_ontology_graph.html">OntologyGraph</a></td><td class="indexvalue">Contains only the graphical representation of an ontology. No manipulation tools. Use signal/slot mechanism to react on clicks and text edits in this widget </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev_1_1ptr__vector.html">mbdev::ptr_vector&lt; T &gt;</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev__ontology_1_1statement.html">mbdev_ontology::statement</a></td><td class="indexvalue">Used to store a single statement of an ontology. Statement is a pair of cells </td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev_1_1string.html">mbdev::string</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev_1_1string__vector.html">mbdev::string_vector</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="classstd_1_1vector.html">vector</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="classmbdev_1_1vector.html">mbdev::vector&lt; T &gt;</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="classstd_1_1vector.html">vector</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_visual_ontology.html">VisualOntology</a></td><td class="indexvalue">Scaled view of ontology </td></tr>
 </table>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -134,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Tue Aug 7 2012 23:00:25 for GrafOnto by
+    <li class="footer">Generated on Sun Sep 9 2012 22:23:22 for GrafOnto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

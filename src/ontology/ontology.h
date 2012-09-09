@@ -94,17 +94,24 @@ public:
      */
    cell* addCell(const cell& cell);
    /*!
-     \brief
+     \brief Adds a new statement. If a statement exists it is first looking for
      */
    string addStatement(cell& left, cell& right);
+   string deleteCategory(const string& name);
+   string deleteElement(/*const string& kind, */const string& name);
    /*!
      \brief Looks for a category that has the given name and returns its address.
      */
    category* findCategory(const string& name);
+   int getCategoryIndex(const string& name);
    /*!
      \brief Looks for an element that has the given name and returns its address.
      */
    element* findElement(const string& name);
+   ptr_vector<element> findElements(const string& kind);
+   int getElementIndex(/*const category* kind, */const string& name) const;
+   //int getElementIndex(const string& kind, const string& name) const;
+   ptr_vector<int> getElementIndexes(const string& kind) const;
    /*!
      \brief Looks for cells that are matching the given one
       and returns their address.

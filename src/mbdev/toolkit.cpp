@@ -25,6 +25,7 @@ char getch() {
 #ifdef WINDOWS
    return _getch();
 #endif
+   return 0;
 }
 
 }

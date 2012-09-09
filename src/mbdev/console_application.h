@@ -38,14 +38,16 @@ private:
      \brief previously executed commands
      */
    string_vector commandHistory;
-   void initialize();
-   void printLine(string& text, size_t caretPosition, size_t toClear = 60);
-   void overwriteStream(std::stringstream& str, const string& s);
 protected:
    bool debugMode;
    int argc;
    char** argv;
    string_vector args;
+private:
+   void initialize();
+   void printLine(string& text, size_t caretPosition, size_t toClear = 60);
+   void overwriteStream(std::stringstream& str, const string& s);
+protected:
    void handleTab(string& text);
    virtual string execute(const string& command);
    virtual string getClue(const string& current);

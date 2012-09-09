@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OntologyCell</class>
+ <widget class="QWidget" name="OntologyCell">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>30</width>
+    <height>30</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cell of the ontology</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

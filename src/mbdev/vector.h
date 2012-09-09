@@ -37,6 +37,15 @@ public:
       return ss.str();
    }
 
+   vector<T>& operator+=(const vector<T>& vec) {
+      size_t size = vec.size();
+      if(size == 0)
+         return *this;
+      for(size_t i=0; i<size; i++) {
+         this->push_back(vec[i]);
+      }
+      return *this;
+   }
 };
 
 }

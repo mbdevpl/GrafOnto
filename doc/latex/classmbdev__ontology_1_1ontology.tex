@@ -28,18 +28,39 @@
 \item 
 \hyperlink{classmbdev__ontology_1_1cell}{cell} $\ast$ \hyperlink{classmbdev__ontology_1_1ontology_a7d7f23014828019de67edb9b3a2166bb}{add\-Cell} (const \hyperlink{classmbdev__ontology_1_1cell}{cell} \&\hyperlink{classmbdev__ontology_1_1cell}{cell})
 \begin{DoxyCompactList}\small\item\em \-Adds a cell to the list of defined cells. \end{DoxyCompactList}\item 
-\hypertarget{classmbdev__ontology_1_1ontology_a38f19c93a3f6e817dd617fe64598c35e}{\hyperlink{classmbdev_1_1string}{string} {\bfseries add\-Statement} (\hyperlink{classmbdev__ontology_1_1cell}{cell} \&left, \hyperlink{classmbdev__ontology_1_1cell}{cell} \&right)}\label{classmbdev__ontology_1_1ontology_a38f19c93a3f6e817dd617fe64598c35e}
+\hypertarget{classmbdev__ontology_1_1ontology_a38f19c93a3f6e817dd617fe64598c35e}{\hyperlink{classmbdev_1_1string}{string} \hyperlink{classmbdev__ontology_1_1ontology_a38f19c93a3f6e817dd617fe64598c35e}{add\-Statement} (\hyperlink{classmbdev__ontology_1_1cell}{cell} \&left, \hyperlink{classmbdev__ontology_1_1cell}{cell} \&right)}\label{classmbdev__ontology_1_1ontology_a38f19c93a3f6e817dd617fe64598c35e}
+
+\begin{DoxyCompactList}\small\item\em \-Adds a new statement. \-If a statement exists it is first looking for. \end{DoxyCompactList}\item 
+\hypertarget{classmbdev__ontology_1_1ontology_ac8c5ca3059987b8bb4bb7e35bb7d27bc}{\hyperlink{classmbdev_1_1string}{string} {\bfseries delete\-Category} (const \hyperlink{classmbdev_1_1string}{string} \&name)}\label{classmbdev__ontology_1_1ontology_ac8c5ca3059987b8bb4bb7e35bb7d27bc}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1ontology_ac923a46fd1212a4778f6ab77468376e3}{\hyperlink{classmbdev_1_1string}{string} {\bfseries delete\-Element} (const \hyperlink{classmbdev_1_1string}{string} \&name)}\label{classmbdev__ontology_1_1ontology_ac923a46fd1212a4778f6ab77468376e3}
 
 \item 
 \hypertarget{classmbdev__ontology_1_1ontology_a27de6b3b8c0507c9b5383b16cfc23552}{\hyperlink{classmbdev__ontology_1_1category}{category} $\ast$ \hyperlink{classmbdev__ontology_1_1ontology_a27de6b3b8c0507c9b5383b16cfc23552}{find\-Category} (const \hyperlink{classmbdev_1_1string}{string} \&name)}\label{classmbdev__ontology_1_1ontology_a27de6b3b8c0507c9b5383b16cfc23552}
 
 \begin{DoxyCompactList}\small\item\em \-Looks for a category that has the given name and returns its address. \end{DoxyCompactList}\item 
+\hypertarget{classmbdev__ontology_1_1ontology_aa77f2ba5499396a15c598e39ce86912c}{int {\bfseries get\-Category\-Index} (const \hyperlink{classmbdev_1_1string}{string} \&name)}\label{classmbdev__ontology_1_1ontology_aa77f2ba5499396a15c598e39ce86912c}
+
+\item 
 \hypertarget{classmbdev__ontology_1_1ontology_a9dae61dce79833a83c7361b72f435c44}{\hyperlink{classmbdev__ontology_1_1element}{element} $\ast$ \hyperlink{classmbdev__ontology_1_1ontology_a9dae61dce79833a83c7361b72f435c44}{find\-Element} (const \hyperlink{classmbdev_1_1string}{string} \&name)}\label{classmbdev__ontology_1_1ontology_a9dae61dce79833a83c7361b72f435c44}
 
 \begin{DoxyCompactList}\small\item\em \-Looks for an element that has the given name and returns its address. \end{DoxyCompactList}\item 
+\hypertarget{classmbdev__ontology_1_1ontology_a612e5dd67fcac3a09b1a706afd109302}{\hyperlink{classmbdev_1_1ptr__vector}{ptr\-\_\-vector}$<$ \hyperlink{classmbdev__ontology_1_1element}{element} $>$ {\bfseries find\-Elements} (const \hyperlink{classmbdev_1_1string}{string} \&kind)}\label{classmbdev__ontology_1_1ontology_a612e5dd67fcac3a09b1a706afd109302}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1ontology_a9954a0577b6954559a30de87ca9e87cd}{int {\bfseries get\-Element\-Index} (const \hyperlink{classmbdev_1_1string}{string} \&name) const }\label{classmbdev__ontology_1_1ontology_a9954a0577b6954559a30de87ca9e87cd}
+
+\item 
+\hypertarget{classmbdev__ontology_1_1ontology_ae9844b5e7d13a76b8047da14d1111589}{\hyperlink{classmbdev_1_1ptr__vector}{ptr\-\_\-vector}$<$ int $>$ {\bfseries get\-Element\-Indexes} (const \hyperlink{classmbdev_1_1string}{string} \&kind) const }\label{classmbdev__ontology_1_1ontology_ae9844b5e7d13a76b8047da14d1111589}
+
+\item 
 \hypertarget{classmbdev__ontology_1_1ontology_a84485b7f8554e5998481f391c82fb758}{\hyperlink{classmbdev_1_1ptr__vector}{ptr\-\_\-vector}$<$ \hyperlink{classmbdev__ontology_1_1cell}{cell} $>$ \hyperlink{classmbdev__ontology_1_1ontology_a84485b7f8554e5998481f391c82fb758}{find\-Cells} (const \hyperlink{classmbdev__ontology_1_1cell}{cell} \&matching, bool exact=false)}\label{classmbdev__ontology_1_1ontology_a84485b7f8554e5998481f391c82fb758}
 
 \begin{DoxyCompactList}\small\item\em \-Looks for cells that are matching the given one and returns their address. \end{DoxyCompactList}\item 
+\hypertarget{classmbdev__ontology_1_1ontology_a5b9977beda0a587e56e34d9a94d8c937}{\hyperlink{classmbdev_1_1ptr__vector}{ptr\-\_\-vector}$<$ \hyperlink{classmbdev__ontology_1_1cell}{cell} $>$ {\bfseries find\-Cells} ()}\label{classmbdev__ontology_1_1ontology_a5b9977beda0a587e56e34d9a94d8c937}
+
+\item 
 \hypertarget{classmbdev__ontology_1_1ontology_acc8d92197dc8b96180c1f1e33cff6a67}{\hyperlink{classmbdev_1_1ptr__vector}{ptr\-\_\-vector}$<$ \hyperlink{classmbdev__ontology_1_1statement}{statement} $>$ \hyperlink{classmbdev__ontology_1_1ontology_acc8d92197dc8b96180c1f1e33cff6a67}{find\-Statements} (\hyperlink{classmbdev__ontology_1_1statement}{statement} \&matching, bool ignore\-Transitivity=false)}\label{classmbdev__ontology_1_1ontology_acc8d92197dc8b96180c1f1e33cff6a67}
 
 \begin{DoxyCompactList}\small\item\em \-Looks for a category that has the given name and returns its address. \end{DoxyCompactList}\item 

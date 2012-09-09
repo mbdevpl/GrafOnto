@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">GrafOnto
-   &#160;<span id="projectnumber">0.35</span>
+   &#160;<span id="projectnumber">0.65</span>
    </div>
    <div id="projectbrief">Converts an ontology to a graph.</div>
   </td>
@@ -114,7 +114,7 @@ Inheritance diagram for mbdev::console_application:</div>
  <div class="center">
   <img src="classmbdev_1_1console__application.png" usemap="#mbdev::console_application_map" alt=""/>
   <map id="mbdev::console_application_map" name="mbdev::console_application_map">
-<area href="classgrafonto.html" alt="grafonto" shape="rect" coords="0,56,167,80"/>
+<area href="class_onto_console_interpreter.html" alt="OntoConsoleInterpreter" shape="rect" coords="0,56,167,80"/>
 </map>
  </div></div>
 
@@ -122,10 +122,18 @@ Inheritance diagram for mbdev::console_application:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8105151a36efcca192dcb3709c6ea652"></a><!-- doxytag: member="mbdev::console_application::console_application" ref="a8105151a36efcca192dcb3709c6ea652" args="(int argc, char *argv[])" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>console_application</b> (int argc, char *argv[])</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ec9a999cbcb3be3f27ace507b18edb2"></a><!-- doxytag: member="mbdev::console_application::console_application" ref="a3ec9a999cbcb3be3f27ace507b18edb2" args="(int argc, char *argv[], std::ostream &amp;outputStream=std::cout)" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>console_application</b> (int argc, char *argv[], std::ostream &amp;outputStream=std::cout)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad157a0ef8d992092b8d9d14e7f621073"></a><!-- doxytag: member="mbdev::console_application::getUserSymbol" ref="ad157a0ef8d992092b8d9d14e7f621073" args="() const " -->
+<a class="el" href="classmbdev_1_1string.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUserSymbol</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a311506abcf542bc78385f447171b3b7d"></a><!-- doxytag: member="mbdev::console_application::getCommandHistorySize" ref="a311506abcf542bc78385f447171b3b7d" args="() const " -->
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getCommandHistorySize</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0c2e1dc86119c3da094dd00a0c6bdb2"></a><!-- doxytag: member="mbdev::console_application::getCommandHistoryEntry" ref="af0c2e1dc86119c3da094dd00a0c6bdb2" args="(const size_t index) const " -->
+<a class="el" href="classmbdev_1_1string.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCommandHistoryEntry</b> (const size_t index) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58242f26b9b2b32faa2525bea0f6eecd"></a><!-- doxytag: member="mbdev::console_application::isAllowed" ref="a58242f26b9b2b32faa2525bea0f6eecd" args="(char ch)" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isAllowed</b> (char ch)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf462b9a5c8764896c8c2bf2f12271e1"></a><!-- doxytag: member="mbdev::console_application::externExecute" ref="aaf462b9a5c8764896c8c2bf2f12271e1" args="(const string &amp;command)" -->
+<a class="el" href="classmbdev_1_1string.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><b>externExecute</b> (const <a class="el" href="classmbdev_1_1string.html">string</a> &amp;command)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4da56afaaaf53820dde5551ae34bc8da"></a><!-- doxytag: member="mbdev::console_application::exec" ref="a4da56afaaaf53820dde5551ae34bc8da" args="()" -->
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>exec</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaba2a906eb64593cc43ceec6ad96e830"></a><!-- doxytag: member="mbdev::console_application::simulateExec" ref="aaba2a906eb64593cc43ceec6ad96e830" args="(const string &amp;input)" -->
@@ -200,7 +208,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><b>argv</b></td></tr>
       <li class="navelem"><b>mbdev</b>      </li>
       <li class="navelem"><a class="el" href="classmbdev_1_1console__application.html">console_application</a>      </li>
 
-    <li class="footer">Generated on Tue Aug 7 2012 23:00:21 for GrafOnto by
+    <li class="footer">Generated on Sun Sep 9 2012 22:23:19 for GrafOnto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

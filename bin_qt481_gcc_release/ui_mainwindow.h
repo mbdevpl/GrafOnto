@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed Aug 8 11:03:43 2012
+** Created: Sun Sep 9 22:11:59 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,15 +14,15 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QGridLayout>
 #include <QtGui/QHeaderView>
-#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
-#include <QtGui/QScrollArea>
 #include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
 #include <QtGui/QWidget>
+#include "gui/consolesimulator.h"
+#include "gui/visualontology.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -36,29 +36,27 @@ public:
     QAction *actionClear;
     QAction *actionNew;
     QAction *actionSet_name;
-    QAction *actionAdd_relation;
+    QAction *actionAddRel;
     QAction *actionSet_property;
-    QAction *actionRemove_relation;
-    QAction *actionInsert_element;
+    QAction *actionRemoveRel;
+    QAction *actionInsertElem;
     QAction *actionDelete_element;
     QAction *actionDelete;
     QWidget *centralWidget;
-    QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents;
-    QWidget *widget;
-    QLineEdit *lineEdit;
+    QGridLayout *gridLayout;
+    ConsoleSimulator *console;
+    VisualOntology *graph;
     QMenuBar *menuBar;
     QMenu *menuOntology;
     QMenu *menuElement;
     QMenu *menuApplication;
-    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(571, 460);
+        MainWindow->resize(600, 400);
         actionSave = new QAction(MainWindow);
         actionSave->setObjectName(QString::fromUtf8("actionSave"));
         actionExit = new QAction(MainWindow);
@@ -73,55 +71,49 @@ public:
         actionNew->setObjectName(QString::fromUtf8("actionNew"));
         actionSet_name = new QAction(MainWindow);
         actionSet_name->setObjectName(QString::fromUtf8("actionSet_name"));
-        actionAdd_relation = new QAction(MainWindow);
-        actionAdd_relation->setObjectName(QString::fromUtf8("actionAdd_relation"));
+        actionAddRel = new QAction(MainWindow);
+        actionAddRel->setObjectName(QString::fromUtf8("actionAddRel"));
         actionSet_property = new QAction(MainWindow);
         actionSet_property->setObjectName(QString::fromUtf8("actionSet_property"));
-        actionRemove_relation = new QAction(MainWindow);
-        actionRemove_relation->setObjectName(QString::fromUtf8("actionRemove_relation"));
-        actionInsert_element = new QAction(MainWindow);
-        actionInsert_element->setObjectName(QString::fromUtf8("actionInsert_element"));
+        actionRemoveRel = new QAction(MainWindow);
+        actionRemoveRel->setObjectName(QString::fromUtf8("actionRemoveRel"));
+        actionInsertElem = new QAction(MainWindow);
+        actionInsertElem->setObjectName(QString::fromUtf8("actionInsertElem"));
         actionDelete_element = new QAction(MainWindow);
         actionDelete_element->setObjectName(QString::fromUtf8("actionDelete_element"));
         actionDelete = new QAction(MainWindow);
         actionDelete->setObjectName(QString::fromUtf8("actionDelete"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        scrollArea = new QScrollArea(centralWidget);
-        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(0, 0, 571, 401));
-        QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
-        scrollArea->setSizePolicy(sizePolicy);
-        scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 556, 386));
-        widget = new QWidget(scrollAreaWidgetContents);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(60, 40, 120, 80));
-        lineEdit = new QLineEdit(scrollAreaWidgetContents);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(150, 210, 113, 26));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        gridLayout = new QGridLayout(centralWidget);
+        gridLayout->setSpacing(1);
+        gridLayout->setContentsMargins(1, 1, 1, 1);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        console = new ConsoleSimulator(centralWidget);
+        console->setObjectName(QString::fromUtf8("console"));
+
+        gridLayout->addWidget(console, 0, 0, 1, 1);
+
+        graph = new VisualOntology(centralWidget);
+        graph->setObjectName(QString::fromUtf8("graph"));
+
+        gridLayout->addWidget(graph, 0, 1, 1, 1);
+
+        gridLayout->setColumnStretch(1, 1);
+        gridLayout->setColumnMinimumWidth(0, 200);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 571, 24));
+        menuBar->setGeometry(QRect(0, 0, 600, 24));
         menuOntology = new QMenu(menuBar);
         menuOntology->setObjectName(QString::fromUtf8("menuOntology"));
+        menuOntology->setEnabled(false);
         menuElement = new QMenu(menuBar);
         menuElement->setObjectName(QString::fromUtf8("menuElement"));
+        menuElement->setEnabled(false);
         menuApplication = new QMenu(menuBar);
         menuApplication->setObjectName(QString::fromUtf8("menuApplication"));
         MainWindow->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -129,7 +121,7 @@ public:
         menuBar->addAction(menuApplication->menuAction());
         menuBar->addAction(menuOntology->menuAction());
         menuBar->addAction(menuElement->menuAction());
-        menuOntology->addAction(actionInsert_element);
+        menuOntology->addAction(actionInsertElem);
         menuOntology->addSeparator();
         menuOntology->addAction(actionNew);
         menuOntology->addAction(actionSave);
@@ -137,8 +129,8 @@ public:
         menuOntology->addAction(actionClear);
         menuElement->addAction(actionSet_name);
         menuElement->addAction(actionSet_property);
-        menuElement->addAction(actionAdd_relation);
-        menuElement->addAction(actionRemove_relation);
+        menuElement->addAction(actionAddRel);
+        menuElement->addAction(actionRemoveRel);
         menuElement->addSeparator();
         menuElement->addAction(actionDelete);
         menuApplication->addAction(actionAbout);
@@ -152,7 +144,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "GrafOnto", 0, QApplication::UnicodeUTF8));
         actionSave->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("MainWindow", "About", 0, QApplication::UnicodeUTF8));
@@ -160,10 +152,10 @@ public:
         actionClear->setText(QApplication::translate("MainWindow", "Clear", 0, QApplication::UnicodeUTF8));
         actionNew->setText(QApplication::translate("MainWindow", "New", 0, QApplication::UnicodeUTF8));
         actionSet_name->setText(QApplication::translate("MainWindow", "Set name", 0, QApplication::UnicodeUTF8));
-        actionAdd_relation->setText(QApplication::translate("MainWindow", "Add relation", 0, QApplication::UnicodeUTF8));
+        actionAddRel->setText(QApplication::translate("MainWindow", "Add relation", 0, QApplication::UnicodeUTF8));
         actionSet_property->setText(QApplication::translate("MainWindow", "Set property", 0, QApplication::UnicodeUTF8));
-        actionRemove_relation->setText(QApplication::translate("MainWindow", "Remove relation", 0, QApplication::UnicodeUTF8));
-        actionInsert_element->setText(QApplication::translate("MainWindow", "Insert element", 0, QApplication::UnicodeUTF8));
+        actionRemoveRel->setText(QApplication::translate("MainWindow", "Remove relation", 0, QApplication::UnicodeUTF8));
+        actionInsertElem->setText(QApplication::translate("MainWindow", "Insert element", 0, QApplication::UnicodeUTF8));
         actionDelete_element->setText(QApplication::translate("MainWindow", "Delete element", 0, QApplication::UnicodeUTF8));
         actionDelete->setText(QApplication::translate("MainWindow", "Delete", 0, QApplication::UnicodeUTF8));
         menuOntology->setTitle(QApplication::translate("MainWindow", "Ontology", 0, QApplication::UnicodeUTF8));

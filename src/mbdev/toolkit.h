@@ -7,7 +7,7 @@
 #endif
 
 #ifdef WINDOWS
-#include <conio.h>
+#include <conio.h> //for getch()
 #endif
 
 #ifndef nullptr

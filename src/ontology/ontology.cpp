@@ -97,6 +97,38 @@ string ontology::addStatement(cell& left, cell& right) {
    return "added a statement";
 }
 
+string ontology::deleteCategory(const string& name) {
+   int i = getCategoryIndex(name);
+   if(i < 0)
+      throw std::runtime_error("cannot delete category that does not exist");
+   cell ce(name.toVector(' ').trim().cleanse(), *this);
+   ptr_vector<cell> cel = findCells(ce, false);
+   if(!cel.empty()) {
+      // strip all cells of elements from deleted category
+      // redirect all duplicates mentioned in statements to a single copy of the cell
+      // delete all duplicate statements
+      // delete all unused cells
+   }
+   ptr_vector<element> el = findElements(name);
+   if(!el.empty()) {
+      // delete all elements of deleted category
+   }
+   category* c = categories[i];
+   delete c;
+   categories.erase(categories.begin()+i);
+   return "deleted category";
+}
+
+string ontology::deleteElement(/*const string& kind, */const string& name) {
+   int i = getElementIndex(/*findCategory(kind), */name);
+   if(i < 0)
+      throw std::runtime_error("cannot delete element that does not exist");
+   element* e = elements[i];
+   delete e;
+   elements.erase(elements.begin()+i);
+   return "deleted element";
+}
+
 category* ontology::findCategory(const string& name) {
    int len = categories.size();
    for(int i=0; i<len; i++) {
@@ -104,6 +136,17 @@ category* ontology::findCategory(const string& name) {
          return categories[i];
    }
    return nullptr;
+}
+
+int ontology::getCategoryIndex(const string& name) {
+   size_t len = categories.size();
+   if(len == 0)
+      return -1;
+   for(size_t i=0; i<len; i++) {
+      if(name.equals(categories[i]->getName()))
+         return (int)i;
+   }
+   return -1;
 }
 
 element* ontology::findElement(const string& name) {
@@ -114,6 +157,44 @@ element* ontology::findElement(const string& name) {
    }
    return nullptr;
 }
+
+ptr_vector<element> ontology::findElements(const string& kind) {
+   ptr_vector<element> result;
+   //result.push_back(findElement(kind());
+//   int len = elements.size();
+//   for(int i=0; i<len; i++) {
+//      if(kind.compare(elements[i]->getName()) == 0)
+//         return elements[i];
+//   }
+   //return nullptr;
+   return result;
+}
+
+int ontology::getElementIndex(/*const category* kind, */const string& name) const {
+//   if(!kind)
+//      return -1;
+   size_t len = elements.size();
+   if(len == 0)
+      return -1;
+   for(size_t i=0; i<len; i++) {
+      element* e = elements[i];
+      if(/*kind == e->getCategoryPtr() && */name.equals(e->getName()))
+         return (int)i;
+   }
+   return -1;
+}
+
+//int ontology::getElementIndex(const string& kind, const string& name) const {
+//   size_t len = categories.size();
+//   if(len == 0)
+//      return -1;
+//   for(size_t i=0; i<len; i++) {
+//      element* e = elements[i];
+//      if(kind.equals(e->getCategoryPtr()->getName()), name.equals(elements[i]->getName()))
+//         return (int)i;
+//   }
+//   return -1;
+//}
 
 ptr_vector<cell> ontology::findCells(const cell& matching, bool exact) {
 #ifdef DEBUG

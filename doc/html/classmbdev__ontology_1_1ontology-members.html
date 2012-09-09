@@ -33,7 +33,7 @@
   
   <td style="padding-left: 0.5em;">
    <div id="projectname">GrafOnto
-   &#160;<span id="projectnumber">0.35</span>
+   &#160;<span id="projectnumber">0.65</span>
    </div>
    <div id="projectbrief">Converts an ontology to a graph.</div>
   </td>
@@ -105,13 +105,20 @@ This is the complete list of members for <a class="el" href="classmbdev__ontolog
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#a7d7f23014828019de67edb9b3a2166bb">addCell</a>(const cell &amp;cell)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#aeb353a93019334cdcf01a1c9508077a7">addElement</a>(string &amp;kind, string &amp;name)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>addElements</b>(string &amp;kind, string_vector &amp;names) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
-  <tr bgcolor="#f0f0f0"><td><b>addStatement</b>(cell &amp;left, cell &amp;right) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#a38f19c93a3f6e817dd617fe64598c35e">addStatement</a>(cell &amp;left, cell &amp;right)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>deleteCategory</b>(const string &amp;name) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>deleteElement</b>(const string &amp;name) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#a27de6b3b8c0507c9b5383b16cfc23552">findCategory</a>(const string &amp;name)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#a84485b7f8554e5998481f391c82fb758">findCells</a>(const cell &amp;matching, bool exact=false)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>findCells</b>() (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#a9dae61dce79833a83c7361b72f435c44">findElement</a>(const string &amp;name)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>findElements</b>(const string &amp;kind) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#acc8d92197dc8b96180c1f1e33cff6a67">findStatements</a>(statement &amp;matching, bool ignoreTransitivity=false)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>getCategories</b>() const  (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>getCategoryIndex</b>(const string &amp;name) (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>getCells</b>() const  (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>getElementIndex</b>(const string &amp;name) const  (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>getElementIndexes</b>(const string &amp;kind) const  (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>getElements</b>() const  (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classmbdev__ontology_1_1ontology.html#ae12bee76ef6eb38b770afa9377fa37ad">ontology</a>()</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>operator&lt;&lt;</b> (defined in <a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a>)</td><td><a class="el" href="classmbdev__ontology_1_1ontology.html">mbdev_ontology::ontology</a></td><td><code> [friend]</code></td></tr>
@@ -136,7 +143,7 @@ This is the complete list of members for <a class="el" href="classmbdev__ontolog
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Tue Aug 7 2012 23:00:25 for GrafOnto by
+    <li class="footer">Generated on Sun Sep 9 2012 22:23:22 for GrafOnto by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
