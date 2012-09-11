@@ -1,0 +1,1 @@
+grafonto_console -debug -demo

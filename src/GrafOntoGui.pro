@@ -47,7 +47,6 @@ SOURCES += main_gui.cpp \
     gui/ontoaddcatdialog.cpp \
     gui/ontoaddstmtdialog.cpp \
     gui/ontoaddelemdialog.cpp \
-    gui/simplearrow.cpp \
 
 # *.h
 HEADERS  += \
@@ -75,10 +74,10 @@ HEADERS  += \
     gui/ontoaddcatdialog.h \
     gui/ontoaddstmtdialog.h \
     gui/ontoaddelemdialog.h \
-    gui/simplearrow.h \
 
 # *.ui
 FORMS    += \
+    gui/simplearrow.ui \
     gui/consolesimulator.ui \
     gui/mainwindow.ui \
     gui/ontologycell.ui \
@@ -87,4 +86,3 @@ FORMS    += \
     gui/ontoaddcatdialog.ui \
     gui/ontoaddstmtdialog.ui \
     gui/ontoaddelemdialog.ui \
-    gui/simplearrow.ui \
