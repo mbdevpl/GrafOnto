@@ -13,12 +13,13 @@ Where is everything
 * */bin/linux* - linux binaries
 * */bin/windows* - windows binaries
 * */doc/doxygen* - documentation of classes
-* */doc/userquide* - user guide
+* */doc/userguide* - user guide
 * */src* - source code and Qt Creator project files
 
 
 License
 -------------------
+
 <pre>
 GrafOnto: interactive graphical visualisation of categorial ontologies
 Copyright (C) 2012  Mateusz Bysiek, http://mbdev.pl/
