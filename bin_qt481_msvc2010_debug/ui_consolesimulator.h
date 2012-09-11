@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'consolesimulator.ui'
 **
-** Created: Sat 11. Aug 21:02:04 2012
+** Created: Mon 10. Sep 01:13:38 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -38,12 +38,17 @@ public:
     {
         if (ConsoleSimulator->objectName().isEmpty())
             ConsoleSimulator->setObjectName(QString::fromUtf8("ConsoleSimulator"));
-        ConsoleSimulator->resize(280, 415);
+        ConsoleSimulator->resize(358, 415);
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ConsoleSimulator->sizePolicy().hasHeightForWidth());
+        ConsoleSimulator->setSizePolicy(sizePolicy);
         gridLayout = new QGridLayout(ConsoleSimulator);
-        gridLayout->setContentsMargins(6, 6, 6, 6);
+        gridLayout->setContentsMargins(2, 2, 2, 2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setHorizontalSpacing(2);
-        gridLayout->setVerticalSpacing(5);
+        gridLayout->setVerticalSpacing(3);
         commandLog = new QPlainTextEdit(ConsoleSimulator);
         commandLog->setObjectName(QString::fromUtf8("commandLog"));
 

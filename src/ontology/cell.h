@@ -22,6 +22,7 @@ public:
    cell(const string_vector& vec, ontology& onto);
    void insert(element* e);
    void insert(category* c, element* e);
+   string str();
    friend std::ostream& operator<<(std::ostream& os, const cell& c);
 };
 

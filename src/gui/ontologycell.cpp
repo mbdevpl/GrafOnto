@@ -12,7 +12,7 @@ void OntologyCell::refreshGraphics() {
    //this->setGeometry(QRect(0, 0, size*50, 2*20));
    cell::iterator it;
    size_t index = 0;
-   size_t width = 0;
+   size_t width = 4;
    for(it = c->begin(); it != c->end(); it++) {
       cell_element& ce = *it;
       //category
@@ -54,6 +54,18 @@ void OntologyCell::setCell(cell* c) {
       return;
    this->c = c;
    refreshGraphics();
+}
+
+void OntologyCell::paintEvent(QPaintEvent* /* event */)
+{
+#ifdef DEBUG
+   qDebug() << "paintEvent in cell " << width() << "x" << height();
+#endif
+   QPainter p(this);
+   p.setPen(QPen(Qt::black));
+   p.drawRect(1, 1, width() - 2, height() - 2);
+   //p.setBrush(Qt::NoBrush);
+   //p.drawLine(from,to);
 }
 
 QSize OntologyCell::sizeHint() {

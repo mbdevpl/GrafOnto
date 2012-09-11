@@ -1,9 +1,14 @@
 #pragma once
+#include <QPainter>
 #include <QLabel>
 #include <QRect>
 #include <QVector>
 #include <QWidget>
 #include "ontology/cell.h"
+
+#ifdef DEBUG
+#include <QDebug>
+#endif
 
 using namespace mbdev_ontology;
 
@@ -32,5 +37,12 @@ public:
      \param c address of the cell
      */
    void setCell(cell* c);
+   cell* getCell()
+   {
+      return c;
+   }
+protected:
+   void paintEvent(QPaintEvent *event);
+public:
    virtual QSize sizeHint();
 };

@@ -19,9 +19,11 @@ protected:
    category* cat;
    /*!
      \brief determines if this element is transitive, i.e. if:
-      1) three Cells are connected like a->b->c
-      2) both Cell a and Cell b have this element in them
-      then the ontology interprets this as if there was a connection between a and c (a->c)
+      1) lets call this element A
+      2) four cells are connected in pairs, like: a->b c->d
+      3) both cell a and cell c have element A in them
+      4) cell c, after subtraction of element A is equal to cell b
+      then the ontology interprets this as if there was a connection between a and c (a->d)
 
       example ontology: "add category obj" "add category relation" "add obj a" "add obj b"
          "add obj c" "add relation is" "set is transitive" "a is: b" "b is: c"

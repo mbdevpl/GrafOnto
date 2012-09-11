@@ -120,7 +120,16 @@ public:
    // returns all cells
    ptr_vector<cell> findCells();
    /*!
-     \brief Looks for a category that has the given name and returns its address.
+     Zero as a parameter value causes the given side to become irrelevant.
+     When zero is given in both parameters, method returns all statements.
+     */
+   ptr_vector<statement> ontology::findStatements(cell* left = 0, cell* right = 0);
+   /*!
+     \brief Looks for all statements that match given one.
+     \param matching statement has left and right part, algorithm looks for statements
+     that match right side exactly, and that have on the left side all of the elements
+     mentioned in parameter's left side, but may have more
+     \return pointers to all matching statements
      */
    ptr_vector<statement> findStatements(statement& matching,
                                   bool ignoreTransitivity = false);

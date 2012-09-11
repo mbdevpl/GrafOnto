@@ -25,7 +25,7 @@
      <widget class="ConsoleSimulator" name="console" native="true"/>
     </item>
     <item row="0" column="1">
-     <widget class="VisualOntology" name="graph" native="true"/>
+     <widget class="VisualOntology" name="visualisation" native="true"/>
     </item>
    </layout>
   </widget>
@@ -35,17 +35,19 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOntology">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="title">
      <string>Ontology</string>
     </property>
-    <addaction name="actionInsertElem"/>
+    <addaction name="actionAddCat"/>
+    <addaction name="actionAddElem"/>
+    <addaction name="actionAddStmt"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionFindAll"/>
     <addaction name="separator"/>
     <addaction name="actionNew"/>
     <addaction name="actionSave"/>
@@ -53,18 +55,15 @@
     <addaction name="actionClear"/>
    </widget>
    <widget class="QMenu" name="menuElement">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
     <property name="title">
      <string>Element</string>
     </property>
-    <addaction name="actionSet_name"/>
-    <addaction name="actionSet_property"/>
-    <addaction name="actionAddRel"/>
-    <addaction name="actionRemoveRel"/>
+    <addaction name="actionRename"/>
+    <addaction name="actionTrans"/>
     <addaction name="separator"/>
     <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionSet_property"/>
    </widget>
    <widget class="QMenu" name="menuApplication">
     <property name="title">
@@ -80,6 +79,9 @@
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSave">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>
@@ -90,48 +92,72 @@
    </property>
   </action>
   <action name="actionAbout">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>About</string>
    </property>
   </action>
   <action name="actionLoad">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Load</string>
    </property>
   </action>
   <action name="actionClear">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Clear</string>
    </property>
   </action>
   <action name="actionNew">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>New</string>
    </property>
   </action>
-  <action name="actionSet_name">
+  <action name="actionRename">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
-    <string>Set name</string>
+    <string>Rename</string>
    </property>
   </action>
   <action name="actionAddRel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Add relation</string>
    </property>
   </action>
   <action name="actionSet_property">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Set property</string>
    </property>
   </action>
   <action name="actionRemoveRel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Remove relation</string>
    </property>
   </action>
-  <action name="actionInsertElem">
+  <action name="actionAddElem">
    <property name="text">
-    <string>Insert element</string>
+    <string>Add element</string>
    </property>
   </action>
   <action name="actionDelete_element">
@@ -142,6 +168,31 @@
   <action name="actionDelete">
    <property name="text">
     <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionAddCat">
+   <property name="text">
+    <string>Add category</string>
+   </property>
+  </action>
+  <action name="actionFindAll">
+   <property name="text">
+    <string>Find all</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find...</string>
+   </property>
+  </action>
+  <action name="actionAddStmt">
+   <property name="text">
+    <string>Add statement</string>
+   </property>
+  </action>
+  <action name="actionTrans">
+   <property name="text">
+    <string>Transitive</string>
    </property>
   </action>
  </widget>

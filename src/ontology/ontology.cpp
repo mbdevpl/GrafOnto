@@ -264,6 +264,22 @@ ptr_vector<cell> ontology::findCells() {
    return findCells(cell(), false);
 }
 
+ptr_vector<statement> ontology::findStatements(cell* left, cell* right)
+{
+   ptr_vector<statement> results;
+   for(ptr_vector<statement>::iterator i = statements.begin();
+       i != statements.end(); ++i)
+   {
+      statement* s = *i;
+      if(left && s->leftPtr() != left)
+         continue;
+      if(right && s->rightPtr() != right)
+         continue;
+      results.push_back(s);
+   }
+   return results;
+}
+
 ptr_vector<statement> ontology::findStatements(statement& matching,
                                                bool ignoreTransitivity) {
    ptr_vector<statement> results;

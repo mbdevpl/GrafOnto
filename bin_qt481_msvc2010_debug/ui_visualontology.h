@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'visualontology.ui'
 **
-** Created: Sat 11. Aug 23:03:47 2012
+** Created: Mon 10. Sep 01:13:38 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -19,7 +19,7 @@
 #include <QtGui/QScrollArea>
 #include <QtGui/QSlider>
 #include <QtGui/QWidget>
-#include <ontologygraph.h>
+#include "gui/ontologygraph.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -37,6 +37,8 @@ public:
             VisualOntology->setObjectName(QString::fromUtf8("VisualOntology"));
         VisualOntology->resize(400, 300);
         gridLayout = new QGridLayout(VisualOntology);
+        gridLayout->setSpacing(2);
+        gridLayout->setContentsMargins(2, 2, 2, 2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         zoomSlider = new QSlider(VisualOntology);
         zoomSlider->setObjectName(QString::fromUtf8("zoomSlider"));
@@ -49,11 +51,12 @@ public:
         scrollArea->setWidgetResizable(true);
         graph = new OntologyGraph();
         graph->setObjectName(QString::fromUtf8("graph"));
-        graph->setGeometry(QRect(0, 0, 355, 280));
+        graph->setGeometry(QRect(0, 0, 363, 294));
         scrollArea->setWidget(graph);
 
         gridLayout->addWidget(scrollArea, 0, 1, 1, 1);
 
+        gridLayout->setColumnStretch(1, 1);
 
         retranslateUi(VisualOntology);
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ontologygraph.ui'
 **
-** Created: Sat 11. Aug 22:51:18 2012
+** Created: Mon 10. Sep 01:15:34 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QGridLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QWidget>
 
@@ -22,12 +23,15 @@ QT_BEGIN_NAMESPACE
 class Ui_OntologyGraph
 {
 public:
+    QGridLayout *gridLayout;
 
     void setupUi(QWidget *OntologyGraph)
     {
         if (OntologyGraph->objectName().isEmpty())
             OntologyGraph->setObjectName(QString::fromUtf8("OntologyGraph"));
         OntologyGraph->resize(400, 300);
+        gridLayout = new QGridLayout(OntologyGraph);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
 
         retranslateUi(OntologyGraph);
 
@@ -36,7 +40,7 @@ public:
 
     void retranslateUi(QWidget *OntologyGraph)
     {
-        OntologyGraph->setWindowTitle(QApplication::translate("OntologyGraph", "Form", 0, QApplication::UnicodeUTF8));
+        OntologyGraph->setWindowTitle(QApplication::translate("OntologyGraph", "Graph of the ontology", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -30,6 +30,30 @@ void console_application::initialize() {
    allowedChars.push_back('*');
    allowedChars.push_back('/');
    allowedChars.push_back('\\');
+
+#ifdef LINUX
+   charReturn = 10;
+   charTab = 9;
+   charBackspace = 127;
+   charSpecial = 91;
+   charUp = 65;
+   charDown = 66;
+   charRight = 67;
+   charLeft = 68;
+#endif
+#ifdef WINDOWS
+   charReturn = 13;
+   charTab = 9;
+   charBackspace = 8;
+   //   if(std::numeric_limits<char>::min() < 0)
+   //       charSpecial = -32;
+   //   else
+   charSpecial = (char)224;
+   charUp = 72;
+   charDown = 80;
+   charRight = 77;
+   charLeft = 75;
+#endif
 }
 
 void console_application::printLine(string& text, size_t caretPosition, size_t toClear) {
@@ -64,6 +88,7 @@ void console_application::printLine(string& text, size_t caretPosition, size_t t
 console_application::console_application(int argc, char *argv[], std::ostream& outputStream)
    : out(outputStream),
      allowedChars(), allowedIntervalsStart(), allowedIntervalsEnd(), userSymbol(string("$ ")),
+     charReturn(10), charTab(9), charBackspace(127), charSpecial(91),
      index(0), position(0), commandHistory(), debugMode(false), argc(argc), argv(argv), args() {
    // reading command line arguments
    for(int i = 0; i < argc; i++) {
@@ -127,7 +152,7 @@ string console_application::getCommand() {
    size_t len = 0;
    position = 0;
    char ch = 0;
-   while(ch != 10) {
+   while(ch != charReturn) {
       printLine(text, position);
       len = text.length();
       //s = string(str.str());
@@ -142,10 +167,10 @@ string console_application::getCommand() {
             //str << ch;
          }
          position++;
-      } else if(ch == 9) {
+      } else if(ch == charTab) {
          // tab
          handleTab(text);
-      } else if(ch == 127) {
+      } else if(ch == charBackspace) {
          // backspace
          if(position == 0)
             continue;
@@ -159,16 +184,16 @@ string console_application::getCommand() {
          //   std::cout << " ";
          //std::cout << "\xd" << "$ ";
          //std::cout << str.str();
-      } else if(ch == 91) {
+      } else if(ch == charSpecial) {
          // special characters (double characters, with leading special value)
          ch = getch();
-         if(ch == 67 || ch == 68) {
-            if(ch == 67) {
+         if(ch == charRight || ch == charLeft) {
+            if(ch == charRight) {
                //right arrow
                if(position == len)
                   continue;
                position++;
-            } else if(ch == 68) {
+            } else if(ch == charLeft) {
                //left arrow
                if(position == 0)
                   continue;
@@ -178,14 +203,14 @@ string console_application::getCommand() {
                //std::cout << str.str().substr(0, position);
                //std::cout << "{position=" << position << "}";
             }
-         } else if(ch == 65 || ch == 66) {
-            if(ch == 65) {
+         } else if(ch == charUp || ch == charDown) {
+            if(ch == charUp) {
                // arrow up
                if(index < 0) index = 0;
                if(index == 0)
                   continue;
                index--;
-            } else if(ch == 66) {
+            } else if(ch == charDown) {
                // arrow down
                index++;
                int size = commandHistory.size();
@@ -216,7 +241,7 @@ string console_application::getCommand() {
       }
       //std::cout.flush();
    }
-   if(ch == 10) {
+   if(ch == charReturn) {
       out << std::endl;
    }
    out.flush();
@@ -278,6 +303,14 @@ int console_application::simulateExec(const string& input) {
       break;
    }
    return 0;
+}
+
+string console_application::externExec(const string& input) {
+   //try {
+   return execute(input);
+   //} catch (std::runtime_error e) {
+   //   return string(e.what()); // << std::endl;
+   //}
 }
 
 }

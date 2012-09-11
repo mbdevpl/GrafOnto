@@ -36,7 +36,7 @@ void ConsoleSimulator::execute(const QString& command) {
    }
    ui->commandLog->appendPlainText(QString(app->getUserSymbol().append(cmd).c_str()));
    try {
-      string result = app->externExecute(cmd);
+      string result = app->externExec(cmd);
       ui->commandLog->appendPlainText(QString(result.c_str()));
       emit commandExecutionSuccess();
    } catch (std::runtime_error ex) {

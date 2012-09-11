@@ -4,6 +4,9 @@
 #include "ontology/ontology.h"
 #include "ontology/ontointerpreter.h"
 #include "console/ontoconsoleinterpreter.h"
+#include "gui/ontoaddcatdialog.h"
+#include "gui/ontoaddelemdialog.h"
+#include "gui/ontoaddstmtdialog.h"
 
 using namespace mbdev_ontology;
 
@@ -34,5 +37,9 @@ public:
    // destructor
    ~MainWindow();
 private slots:
+   void showAddCategoryDialog();
+   void showAddElementDialog();
+   void showAddStatementDialog();
+   void refreshGraphics();
 private:
 };

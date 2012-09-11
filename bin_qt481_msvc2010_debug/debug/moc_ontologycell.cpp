@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ontologycell.h'
 **
-** Created: Sat 11. Aug 23:04:06 2012
+** Created: Mon 10. Sep 01:14:17 2012
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../src/ontologycell.h"
+#include "../../src/gui/ontologycell.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'ontologycell.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63

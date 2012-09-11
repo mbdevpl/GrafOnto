@@ -38,6 +38,13 @@ void cell::insert(category* c, element* e) {
    throw std::runtime_error(s.str().c_str());
 }
 
+string cell::str()
+{
+   std::stringstream ss;
+   ss << *this;
+   return ss.str();
+}
+
 std::ostream& operator<<(std::ostream& os, const cell& c) {
    int size = c.size() - 1;
    int i;

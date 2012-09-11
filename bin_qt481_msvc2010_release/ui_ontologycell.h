@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'ontologycell.ui'
 **
-** Created: Sat 11. Aug 22:51:18 2012
+** Created: Mon 10. Sep 01:15:34 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -27,7 +27,7 @@ public:
     {
         if (OntologyCell->objectName().isEmpty())
             OntologyCell->setObjectName(QString::fromUtf8("OntologyCell"));
-        OntologyCell->resize(235, 48);
+        OntologyCell->resize(30, 30);
 
         retranslateUi(OntologyCell);
 
@@ -36,7 +36,7 @@ public:
 
     void retranslateUi(QWidget *OntologyCell)
     {
-        OntologyCell->setWindowTitle(QApplication::translate("OntologyCell", "Form", 0, QApplication::UnicodeUTF8));
+        OntologyCell->setWindowTitle(QApplication::translate("OntologyCell", "Cell of the ontology", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

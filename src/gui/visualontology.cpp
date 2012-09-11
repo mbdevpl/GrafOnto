@@ -16,10 +16,13 @@ OntologyGraph& VisualOntology::getGraph() {
 
 void VisualOntology::setOntology(ontology* onto) {
    getGraph().setOntology(onto);
-   this->updateGeometry();
+   //refreshGraphics();
+   //this->updateGeometry();
+   //ui->scrollAreaWidgetContents->updateGeometry();
 }
 
 void VisualOntology::refreshGraphics() {
    getGraph().refreshGraphics();
-   this->updateGeometry();
+   //this->updateGeometry();
+   //ui->scrollAreaWidgetContents->updateGeometry();
 }

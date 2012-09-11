@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat 11. Aug 22:51:18 2012
+** Created: Mon 10. Sep 01:15:34 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,8 +21,8 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QStatusBar>
 #include <QtGui/QWidget>
-#include <consolesimulator.h>
-#include <visualontology.h>
+#include "gui/consolesimulator.h"
+#include "gui/visualontology.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -63,7 +63,6 @@ public:
         actionExit->setObjectName(QString::fromUtf8("actionExit"));
         actionAbout = new QAction(MainWindow);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
-        actionAbout->setEnabled(false);
         actionLoad = new QAction(MainWindow);
         actionLoad->setObjectName(QString::fromUtf8("actionLoad"));
         actionClear = new QAction(MainWindow);
@@ -105,7 +104,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
+        menuBar->setGeometry(QRect(0, 0, 600, 24));
         menuOntology = new QMenu(menuBar);
         menuOntology->setObjectName(QString::fromUtf8("menuOntology"));
         menuOntology->setEnabled(false);
@@ -145,7 +144,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "GrafOnto", 0, QApplication::UnicodeUTF8));
         actionSave->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
         actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("MainWindow", "About", 0, QApplication::UnicodeUTF8));

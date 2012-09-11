@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Sat 11. Aug 23:03:47 2012
+** Created: Mon 10. Sep 01:13:38 2012
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,8 +21,8 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QStatusBar>
 #include <QtGui/QWidget>
-#include <consolesimulator.h>
-#include <visualontology.h>
+#include "gui/consolesimulator.h"
+#include "gui/visualontology.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -104,7 +104,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
+        menuBar->setGeometry(QRect(0, 0, 600, 24));
         menuOntology = new QMenu(menuBar);
         menuOntology->setObjectName(QString::fromUtf8("menuOntology"));
         menuOntology->setEnabled(false);

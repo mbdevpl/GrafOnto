@@ -1,6 +1,7 @@
 #pragma once
-#include <stdexcept> //for std::runtime_error
+//#include <limits> //for std::numeric_limits
 #include <iostream> //for std::cout
+#include <stdexcept> //for std::runtime_error
 #include "mbdev/toolkit.h"
 #include "mbdev/vector.h"
 #include "mbdev/string_vector.h"
@@ -23,9 +24,26 @@ class console_application
 private:
    std::ostream& out;
    vector<char> allowedChars;
+   // set of starts of allowed characters intervals
    vector<char> allowedIntervalsStart;
+   /*!
+     Set of ends of allowed characters intervals. The list must
+     have the same length as allowedIntervalsStart, and the ends must have
+     larger integer values than the starts.
+     */
    vector<char> allowedIntervalsEnd;
+   // symbol displayed at the beginning of each line with user input
    string userSymbol;
+   // return character
+   char charReturn;
+   // tab character
+   char charTab;
+   // backspace character
+   char charBackspace;
+   // special character
+   char charSpecial;
+   // arrows
+   char charUp, charDown, charRight, charLeft;
    /*!
      \brief currently browsed index of command history
      */
@@ -64,9 +82,9 @@ public:
    inline size_t getCommandHistorySize() const;
    inline string getCommandHistoryEntry(const size_t index) const;
    bool isAllowed(char ch);
-   inline string externExecute(const string& command);
    virtual int exec();
    int simulateExec(const string& input);
+   string externExec(const string& input);
 };
 
 inline string console_application::getUserSymbol() const {
@@ -79,10 +97,6 @@ inline size_t console_application::getCommandHistorySize() const {
 
 inline string console_application::getCommandHistoryEntry(const size_t index) const {
    return commandHistory[index];
-}
-
-inline string console_application::externExecute(const string& command) {
-   return execute(command);
 }
 
 }

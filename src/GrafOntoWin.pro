@@ -4,55 +4,87 @@
 
 QT       += core gui
 
-TARGET = bin
+#name of target executable
+TARGET = grafonto
+
 TEMPLATE = app
 
-SOURCES += main.cpp \
-    ontology/node.cpp \
-    ontology/element.cpp \
+# platform specific defines
+unix:DEFINES += LINUX
+win32:DEFINES += WINDOWS
+
+CONFIG(debug, debug|release) {
+   DEFINES += DEBUG
+}
+
+CONFIG(release, debug|release) {
+   DEFINES += RELEASE
+}
+
+# *.cpp
+SOURCES += main_gui.cpp \
     ontology/category.cpp \
-    ontology/ontology.cpp \
     ontology/cell.cpp \
+    ontology/element.cpp \
+    ontology/node.cpp \
+    ontology/ontointerpreter.cpp \
+    ontology/ontology.cpp \
     ontology/statement.cpp \
-    mbdev/string.cpp \
-    mbdev/strings.cpp \
-    mbdev/vector.cpp \
-    mbdev/toolkit.cpp \
-    mbdev/string_vector.cpp \
-    mbdev/ptr_vector.cpp \
     mbdev/console_application.cpp \
-    grafonto.cpp \
-    mainwindow.cpp \
-    consolesimulator.cpp \
-    visualontology.cpp \
-    ontologygraph.cpp \
-    ontologycell.cpp
+    mbdev/ptr_vector.cpp \
+    mbdev/string.cpp \
+    mbdev/string_vector.cpp \
+    mbdev/strings.cpp \
+    mbdev/toolkit.cpp \
+    mbdev/vector.cpp \
+    console/ontoconsoleinterpreter.cpp \
+    gui/simplearrow.cpp \
+    gui/consolesimulator.cpp \
+    gui/mainwindow.cpp \
+    gui/ontologycell.cpp \
+    gui/ontologygraph.cpp \
+    gui/visualontology.cpp \
+    gui/ontoaddcatdialog.cpp \
+    gui/ontoaddstmtdialog.cpp \
+    gui/ontoaddelemdialog.cpp \
+    gui/simplearrow.cpp \
 
-
+# *.h
 HEADERS  += \
-    ontology/node.h \
-    ontology/element.h \
     ontology/category.h \
-    ontology/ontology.h \
     ontology/cell.h \
+    ontology/element.h \
+    ontology/node.h \
+    ontology/ontointerpreter.h \
+    ontology/ontology.h \
     ontology/statement.h \
-    mbdev/string.h \
-    mbdev/strings.h \
-    mbdev/vector.h \
-    mbdev/toolkit.h \
-    mbdev/string_vector.h \
-    mbdev/ptr_vector.h \
     mbdev/console_application.h \
-    grafonto.h \
-    mainwindow.h \
-    consolesimulator.h \
-    visualontology.h \
-    ontologygraph.h \
-    ontologycell.h
+    mbdev/ptr_vector.h \
+    mbdev/string.h \
+    mbdev/string_vector.h \
+    mbdev/strings.h \
+    mbdev/toolkit.h \
+    mbdev/vector.h \
+    console/ontoconsoleinterpreter.h \
+    gui/simplearrow.h \
+    gui/consolesimulator.h \
+    gui/mainwindow.h \
+    gui/ontologycell.h \
+    gui/ontologygraph.h \
+    gui/visualontology.h \
+    gui/ontoaddcatdialog.h \
+    gui/ontoaddstmtdialog.h \
+    gui/ontoaddelemdialog.h \
+    gui/simplearrow.h \
 
+# *.ui
 FORMS    += \
-    mainwindow.ui \
-    consolesimulator.ui \
-    visualontology.ui \
-    ontologygraph.ui \
-    ontologycell.ui
+    gui/consolesimulator.ui \
+    gui/mainwindow.ui \
+    gui/ontologycell.ui \
+    gui/ontologygraph.ui \
+    gui/visualontology.ui \
+    gui/ontoaddcatdialog.ui \
+    gui/ontoaddstmtdialog.ui \
+    gui/ontoaddelemdialog.ui \
+    gui/simplearrow.ui \
