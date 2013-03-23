@@ -1,0 +1,21 @@
+# files that should be ignored by git
+
+# Qt Creator
+*.user
+
+# Linux
+*.o
+
+# Windows
+Thumbs.db
+*.obj
+
+# Mac OS
+.DS_Store
+
+# LaTeX
+/doc/*/tmp
+*.synctex.gz
+
+# build dirs
+/build*

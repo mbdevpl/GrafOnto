@@ -6,9 +6,7 @@ Project consists of two parts:
 1. GrafOntoConsole: text-mode ontology editor for interactive graphical visualisation of categorial ontologies
 2. GrafOntoGui: interactive graphical visualisation of categorial ontologies
 
-
-Where is everything
--------------------
+## Where is everything
 
 * */bin/linux* - linux binaries
 * */bin/windows* - windows binaries
@@ -16,9 +14,7 @@ Where is everything
 * */doc/userguide* - user guide
 * */src* - source code and Qt Creator project files
 
-
-License
--------------------
+## License
 
 <pre>
 GrafOnto: interactive graphical visualisation of categorial ontologies

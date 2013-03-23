@@ -13,6 +13,7 @@
 % 
 % You should have received a copy of the GNU General Public License
 % along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 \documentclass{article}
 \usepackage[cm]{fullpage} %very small margins (around 1.5cm)
 \usepackage{minted} %syntax coloring \begin{minted}{language}
@@ -33,37 +34,23 @@
 \section{Introduction}
 
 \subsection{License}
-\begin{verbatim}
-GrafOnto: interactive graphical visualisation of categorial ontologies
-Copyright (C) 2012  Mateusz Bysiek, http://mbdev.pl/
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-\end{verbatim}
+GNU General Public License as published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
 
 \subsection{Qt framework}
-This application is written with help of Qt framework. It was compiled for Qt 4.8.1. 
+This application is written with help of Qt framework. It was compiled for Qt 4.8.1.
 
 \subsection{Two applications}
-GrafOnto is split into two separate applications: \em GrafOntoGui \em (from now on called \em Gui\em) and
-\em GrafOntoConsole \em (from now on called \em Console\em).
+GrafOnto is split into two separate applications: \textit{GrafOntoGui} (from now on called
+\textit{Gui}) and \textit{GrafOntoConsole} (from now on called \textit{Console}).
 The first one runs in window, and the second in terminal/command-line.
+
 However, the difference between them is only in the presentation layer i.e. the engine that performs
-operations on the ontology is the same. Nevertheless, there are some differences in usage.
+operations on the ontology is the same.
 
 \subsection{Language}
 Operation of the application is based on text commands given in language similar to SQL. 
-From now on, let's call it \em Lang\em . It is very simple, below is the basic example:
+From now on, let's call it \textit{Lang}. It is very simple, below is the basic example:
 \begin{minted}{ruby}
 add category (thing, situation) # define two categories, called thing and situation
 add thing (writing,book,dictionary,title,index) # create five new things 
@@ -82,41 +69,54 @@ set is transitive # indicate that situation 'is' applied to a chain of elements
 find all that is: writing # should find book and dictionary
 \end{minted}
 
-This is the introduction, therefore I will not provide a list of all possible commands right now. 
-Full specification of Lang is provided later on. Inconsistency in whitespace characters is deliberate,
-it is to show that they do not matter and the script will work just as well no matter how many spaces
-you will insert between the terms.
-
+This is the introduction, therefore I will not provide a list of all possible commands right now.
+Full specification of Lang is provided later on. Inconsistency in whitespace characters is
+deliberate, it is to show that they do not matter and the script will work just as well no matter
+how many spaces you will insert between the terms.
 
 \section{Known issues}
 Yet unsolved issues.
 
 \begin{itemize}
+
   \item Space after colon is mandatory.
+
   \item transitivity does not ``transfer'' other connections of the given element
+
   \item ``find all that \ldots'' does not always work properly with transitivity
-  \item -auto command-line option performs well only when there is only one further argument - please use quotes!
+
+  \item -auto command-line option performs well only when there is only one further argument -
+  please use quotes!
+
 \end{itemize}
 
+\newpage
 
 \section{Feature checklist}
-
-This project is still in development phase, therefore this list is present.
+This project still remains in development phase, this list provides overview of features that are
+really present.
 
 \subsection{Implemented features}
 Features listed below are fully implemented:
 
 \begin{itemize}
+
   \item add category/element (single and multiple)
+
   \item find all
+
 \end{itemize}
 
 \subsection{Unimplemented features}
-Features listed below are not implemented at all or in a degree that is too low to do anything useful.
+Features listed below are not implemented at all or in a degree that is too low to do anything
+useful.
 
 \begin{itemize}
+
   \item deleting
+
   \item Saving/loading ontologies from files
+
 \end{itemize}
 
 \section{Script language specification}
@@ -155,6 +155,8 @@ set <element_name> not transitive
 Sets a given element to be (or not to be) transitive. If the element already is 
 (or already is not) transitive, this command does nothing.
 
+\newpage
+
 \subsection{Ontology persistence}
 
 \subsubsection{save}
@@ -181,8 +183,9 @@ find all that <partial_statement>
 \end{minted}
 Searches for all matching statements in the ontology. Matching statement is defined as
 a statement that has right hand side identical to the given one, and left hand side being 
-a superset of a given LHS. 
+a superset of a given LHS.
 
+\newpage
 
 \section{Command-line options and arguments}
 GrafOnto supports the following arguments:
@@ -192,12 +195,11 @@ start-up, before execution of any other operations.
 
 \verb|-auto| - Supported only in Console, causes application to interpret all further arguments 
 as commands in Lang. Since commands are separated by spaces, and spaces are a must in all Lang commands,
-all further commands are first joined into one long text, and then split where semicolons (\verb|;|) are.
+all further commands are first joined into one long text, and then are split where semicolons (\verb|;|).
 
 \verb|-debug| - Supported only by debug builds. Causes debug output to be displayed. Information 
 about what build are you running can be 
-displayed in Gui via \em About \em menu option, and in Console it is shown at start of the program.
-
+displayed in Gui via \textit{About} menu option, and in Console it is shown at start of the program.
 
 \section{XML ontology container specification}
 This is a specification of XML files that are read/written via \verb|load|/\verb|save| commands.

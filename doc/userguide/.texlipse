@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Sep 11 17:23:13 CEST 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=grafonto_userguide.tex
+outputFile=grafonto_userguide.pdf
+langSpell=en
+markDer=true
+srcDir=
