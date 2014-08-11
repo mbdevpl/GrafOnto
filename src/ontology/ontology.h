@@ -123,7 +123,7 @@ public:
      Zero as a parameter value causes the given side to become irrelevant.
      When zero is given in both parameters, method returns all statements.
      */
-   ptr_vector<statement> ontology::findStatements(cell* left = 0, cell* right = 0);
+   ptr_vector<statement> findStatements(cell* left = 0, cell* right = 0);
    /*!
      \brief Looks for all statements that match given one.
      \param matching statement has left and right part, algorithm looks for statements

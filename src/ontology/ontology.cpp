@@ -160,6 +160,8 @@ element* ontology::findElement(const string& name) {
 
 ptr_vector<element> ontology::findElements(const string& kind) {
    ptr_vector<element> result;
+   if(kind.empty())
+     return result;
    //result.push_back(findElement(kind());
 //   int len = elements.size();
 //   for(int i=0; i<len; i++) {

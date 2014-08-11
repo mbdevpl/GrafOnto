@@ -77,23 +77,23 @@ string ontointerpreter::getClue(const string& current) {
 
 string_vector ontointerpreter::prepareDemo() {
    string demo_s;
-//   demo_s = "add category (thing,feature,situation);"\
-//         "add thing (animal, rabbit,bird ,wings,cat, mouse,eagle, penguin , eyes,  dog);"\
-//         "add thing (hawk,horse,pony,cheetah,tiger,lion,giraffe);"\
-//         "add thing  (  wheels   , engine, windows, aeroplane, object, building)  ;"\
-//         "add feature (big, large, small, black, transparent, loud);"\
-//         "add situation (is,has,eats,loves,likes,barks_at);"\
-//         "set is transitive;set loves not transitive;"\
-//         "rabbit is: animal;bird is: animal;small bird is: bird;"\
-//         "bird has: wings;aeroplane has: wings;aeroplane has: loud engine;"\
-//         "small bird loves: engine;large bird eats: rabbit;dog barks_at: cat;"\
-//         "cat eats: mouse;mouse likes: dog;eagle is: bird;"\
-//         "hawk is: bird;tiger is: large cat;lion is: large cat;"\
-//         "cat is: animal;dog is: animal;cheetah is: large cat;"\
-//         "large animal is: animal;small animal is: animal;building is: large object;"\
-//         "large cat is: large animal;large cat is: cat;"\
-//         "find all that has: wings;find all that is: animal"
-//         ;
+   demo_s = "add category (thing,feature,situation);"\
+         "add thing (animal, rabbit,bird ,wings,cat, mouse,eagle, penguin , eyes,  dog);"\
+         "add thing (hawk,horse,pony,cheetah,tiger,lion,giraffe);"\
+         "add thing  (  wheels   , engine, windows, aeroplane, object, building)  ;"\
+         "add feature (big, large, small, black, transparent, loud);"\
+         "add situation (is,has,eats,loves,likes,barks_at);"\
+         "set is transitive;set loves not transitive;"\
+         "rabbit is: animal;bird is: animal;small bird is: bird;"\
+         "bird has: wings;aeroplane has: wings;aeroplane has: loud engine;"\
+         "small bird loves: engine;large bird eats: rabbit;dog barks_at: cat;"\
+         "cat eats: mouse;mouse likes: dog;eagle is: bird;"\
+         "hawk is: bird;tiger is: large cat;lion is: large cat;"\
+         "cat is: animal;dog is: animal;cheetah is: large cat;"\
+         "large animal is: animal;small animal is: animal;building is: large object;"\
+         "large cat is: large animal;large cat is: cat;"\
+         "find all that has: wings;find all that is: animal"
+         ;
    demo_s = "add category (o);"\
          "add o (aaa,bbb,ccc,ddd,eee,fff);"\
          "aaa: bbb;bbb: ccc;ccc: ddd;ddd: eee;eee: fff"
