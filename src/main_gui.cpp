@@ -1,5 +1,5 @@
 #include <iostream>
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "ontology/ontology.h"
 //#include "ontology/ontointerpreter.h"
 #include "gui/mainwindow.h"
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
    QApplication a(argc, argv);
    std::cout << "GrafOnto: interactive graphical visualisation" << std::endl
              << "          of a categorial ontology" << std::endl
-             << "(C) 2012 Mateusz Bysiek, http://mbdev.pl/" << std::endl;
+             << "(C) 2012 Mateusz Bysiek, https://mbdevpl.github.io/" << std::endl;
 #ifdef RELEASE
    std::cout << "released under GNU General Public License version 3" << std::endl;
    std::cout << " running in release mode" << std::endl;
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 #ifdef WINDOWS
    std::cout << " windows version" << std::endl;
 #endif
-   MainWindow w(onto, a);
+   MainWindow w(onto, argc, argv, a);
    w.show();
    return a.exec();
 

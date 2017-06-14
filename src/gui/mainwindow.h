@@ -33,7 +33,7 @@ public:
      \param graf reference to the console application with all data and command interpreter
      \param direct reference to the ontology that is visualized in this application
      */
-   explicit MainWindow(ontology &onto, QApplication& app, QWidget* parent = 0);
+   explicit MainWindow(ontology &onto, int argc, char *argv[], QApplication& app, QWidget* parent = 0);
    // destructor
    ~MainWindow();
 private slots:

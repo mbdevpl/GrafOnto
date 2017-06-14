@@ -2,7 +2,7 @@
 # Project created by QtCreator 2012-07-24T10:22:51
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets
 
 #name of target executable
 TARGET = grafonto

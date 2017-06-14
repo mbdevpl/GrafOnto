@@ -1,11 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(ontology& onto, QApplication& app, QWidget* parent)
+MainWindow::MainWindow(ontology& onto, int argc, char *argv[], QApplication& app, QWidget* parent)
    : QMainWindow(parent), ui(new Ui::MainWindow), onto(onto) {
    ui->setupUi(this);
    // initialise console, run demo if it is desired
-   OntoConsoleInterpreter* onto_console = new OntoConsoleInterpreter(app.argc(), app.argv(), onto);
+   OntoConsoleInterpreter* onto_console = new OntoConsoleInterpreter(argc, argv, onto);
    ui->console->setApplication(onto_console);
    if(onto_console->getDemoMode()) {
       const string_vector& demo = onto_console->prepareDemo();

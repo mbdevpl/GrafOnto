@@ -10,7 +10,7 @@
 #include <sstream>
 #include <QDebug>
 #endif
-#include "SimpleArrow.h"
+#include "simplearrow.h"
 
 using namespace mbdev_ontology;
 
