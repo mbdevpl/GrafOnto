@@ -1,6 +1,18 @@
 GrafOnto
 ========
 
+[![build status from Travis CI](https://travis-ci.org/mbdevpl/GrafOnto.svg?branch=master)](https://travis-ci.org/mbdevpl/VaDoR)
+[![license](https://img.shields.io/github/license/mbdevpl/GrafOnto.svg)](https://github.com/mbdevpl/GrafOnto)
+
+Implemented for AI Fundamentals course
+during my Bachelor studies at Warsaw University of Technology
+
+Mateusz Bysiek
+
+Warsaw, Poland, 2012
+
+## Basic information
+
 Project consists of two parts:
 
 1. GrafOntoConsole: text-mode ontology editor for interactive graphical visualisation of categorial ontologies
@@ -8,28 +20,12 @@ Project consists of two parts:
 
 ## Where is everything
 
-* */bin/linux* - linux binaries
-* */bin/windows* - windows binaries
-* */doc/doxygen* - documentation of classes
-* */doc/userguide* - user guide
-* */src* - source code and Qt Creator project files
+* `/bin/linux*` - linux binaries
+* `/bin/windows*` - windows binaries
+* `/doc/doxygen*` - documentation of classes
+* `/doc/userguide*` - user guide
+* `/src*` - source code and Qt Creator project files
 
 ## License
 
-<pre>
-GrafOnto: interactive graphical visualisation of categorial ontologies
-Copyright (C) 2012  Mateusz Bysiek, http://mbdev.pl/
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-</pre>
+Please see [the license notice](NOTICE) and [the license itself](LICENSE).
