@@ -5,7 +5,7 @@
 QT       += core gui widgets
 
 #name of target executable
-TARGET = grafonto
+TARGET = grafonto_gui
 
 TEMPLATE = app
 

@@ -1,7 +1,7 @@
 GrafOnto
 ========
 
-[![build status from Travis CI](https://travis-ci.org/mbdevpl/GrafOnto.svg?branch=master)](https://travis-ci.org/mbdevpl/VaDoR)
+[![build status from Travis CI](https://travis-ci.org/mbdevpl/GrafOnto.svg?branch=master)](https://travis-ci.org/mbdevpl/GrafOnto)
 [![license](https://img.shields.io/github/license/mbdevpl/GrafOnto.svg)](https://github.com/mbdevpl/GrafOnto)
 
 Implemented for AI Fundamentals course
