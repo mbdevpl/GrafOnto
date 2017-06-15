@@ -1,0 +1,43 @@
+version: "{build}"
+
+environment:
+  matrix:
+#    - QT: "5.6"
+#      QTCOMPILER: "msvc2013"
+#      QTMAKE: "nmake"
+#    - QT: "5.6"
+#      QTCOMPILER: "msvc2013_64"
+#      QTMAKE: "nmake"
+#    - QT: "5.6"
+#      QTCOMPILER: "msvc2015"
+#      QTMAKE: "nmake"
+#    - QT: "5.6"
+#      QTCOMPILER: "msvc2015_64"
+#      QTMAKE: "nmake"
+    - QT: "5.6"
+      PLATFORM: "x86"
+      QTCOMPILER: "mingw49_32"
+      QTMAKE: "mingw32-make"
+    - QT: "5.9"
+      PLATFORM: "x86"
+      QTCOMPILER: "mingw53_32"
+      QTMAKE: "mingw32-make"
+
+init:
+  - ps: $env:VSCOMNTOOLS=(Get-Content ("env:VS" + "$env:VSVER" + "0COMNTOOLS"))
+  - set QTDIR=C:\Qt\%QT%\%QTCOMPILER%
+  - set PATH=%PATH%;%QTDIR%\bin
+  - if "%QTMAKE%" == "mingw32-make" set PATH=%PATH%;C:\MinGW\bin
+  - if "%QTMAKE%" == "nmake" if "%PLATFORM%" == "x86" call "%VSCOMNTOOLS%\..\..\VC\vcvarsall.bat"
+  - if "%QTMAKE%" == "nmake" if "%PLATFORM%" == "X64" "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SetEnv.cmd" /x64
+  - if "%QTMAKE%" == "nmake" if "%PLATFORM%" == "X64" call "%VSCOMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64
+
+build_script:
+  - qmake src\GrafOntoConsole.pro
+  - cmd: "%QTMAKE%"
+  - qmake src\GrafOntoGui.pro
+  - cmd: "%QTMAKE%"
+
+test_script:
+  - dir
+  - release\grafonto.exe -demo -auto
