@@ -2,7 +2,7 @@ GrafOnto
 ========
 
 [![build status from Travis CI](https://travis-ci.org/mbdevpl/GrafOnto.svg?branch=master)](https://travis-ci.org/mbdevpl/GrafOnto)
-[![build status from Travis CI](https://ci.appveyor.com/api/projects/status/github/mbdevpl/GrafOnto?svg=true&branch=master)](https://ci.appveyor.com/project/mbdevpl/grafonto)
+[![build status from AppVeyor](https://ci.appveyor.com/api/projects/status/github/mbdevpl/GrafOnto?svg=true&branch=master)](https://ci.appveyor.com/project/mbdevpl/grafonto)
 [![license](https://img.shields.io/github/license/mbdevpl/GrafOnto.svg)](https://github.com/mbdevpl/GrafOnto)
 
 Implemented for AI Fundamentals course
