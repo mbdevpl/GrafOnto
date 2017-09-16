@@ -1,32 +1,32 @@
 sudo: required
 language: cpp
-os:
-  - linux
-#  - osx
+os: linux
 
 compiler:
-#  - clang
+  - clang
   - gcc
 
+env:
+  - QT="551"
+  - QT="562"
+  - QT="571"
+  - QT="58"
+  - QT="591"
+
 install:
-  - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-add-repository -y ppa:beineri/opt-qt562
-#  - sudo apt-add-repository -y ppa:beineri/opt-qt58-trusty
+  - sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test"
+  - sudo apt-add-repository -y "ppa:beineri/opt-qt${QT}-trusty"
   - sudo apt-get -qq update
-  - sudo apt-get install qt56base qt56tools qt56canvas3d qt56svg
-#  - sudo apt-get install qt58base qt58tools
+  - sudo apt-get install "qt${QT:0:2}base" "qt${QT:0:2}tools" "qt${QT:0:2}canvas3d" "qt${QT:0:2}svg"
 
 before_script:
-  - /opt/qt56/bin/qmake --version
+  - /opt/qt${QT:0:2}/bin/qmake --version
 
 script:
-  - /opt/qt56/bin/qmake src/GrafOntoConsole.pro
+  - /opt/qt${QT:0:2}/bin/qmake src/GrafOntoConsole.pro
   - make
-  - /opt/qt56/bin/qmake src/GrafOntoGui.pro
+  - /opt/qt${QT:0:2}/bin/qmake src/GrafOntoGui.pro
   - make
-
-after_success:
-  - ls -lah
   - ./grafonto -demo -auto
 
 notifications:
