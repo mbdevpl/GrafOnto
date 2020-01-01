@@ -1,6 +1,11 @@
-sudo: required
 language: cpp
 os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libgl1-mesa-dev
 
 compiler:
   - clang
@@ -13,7 +18,6 @@ env:
   - QT="597"
 
 install:
-  - sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test"
   - sudo apt-add-repository -y "ppa:beineri/opt-qt${QT}-xenial"
   - sudo apt-get -qq update
   - sudo apt-get install "qt${QT:0:2}base" "qt${QT:0:2}tools" "qt${QT:0:2}canvas3d" "qt${QT:0:2}svg"
